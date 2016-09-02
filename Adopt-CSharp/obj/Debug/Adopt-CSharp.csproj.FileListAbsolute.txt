@@ -1,0 +1,2 @@
+c:\users\iluis\documents\visual studio 2015\Projects\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
