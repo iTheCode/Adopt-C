@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(25, 176);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(227, 23);
-            this.progressBar1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.progressBar1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -51,8 +42,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
