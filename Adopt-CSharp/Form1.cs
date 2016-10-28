@@ -29,7 +29,7 @@ namespace Adopt_CSharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtSalir_Click(object sender, EventArgs e)
@@ -66,5 +66,8 @@ namespace Adopt_CSharp
         {
             this.Close();
         }
+
+        private void txtIngresar_Click(object sender, EventArgs e)
+        {
     }
 }
