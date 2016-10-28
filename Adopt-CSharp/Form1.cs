@@ -66,5 +66,21 @@ namespace Adopt_CSharp
         {
             this.Close();
         }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            usuarios usuob = new usuarios();
+            usuob.Usuario = this.txtUsuario.Text;
+            usuob.Contraseña = this.txtContraseña.SelectedText;
+
+            if(usuob.Buscar()==true)
+            {
+                MessageBox.Show(usuob.Mensaje, "login");
+            }
+            else
+            {
+                MessageBox.Show(usuob.Mensaje,"Error");
+            }
+        }
     }
 }

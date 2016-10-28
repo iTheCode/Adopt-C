@@ -149,6 +149,7 @@
             this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 14;
             this.label3.Text = "Ingresar";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // pictureBox5
             // 

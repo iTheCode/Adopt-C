@@ -18,7 +18,7 @@ namespace Adopt_CSharp
 
         public conexion()
         {
-            this.cadenaconexion = (@"Data Dource=RICARDO-PC\SQLEXPRESS; Initial catalog=BD_adopt; integrated security=true");
+            this.cadenaconexion = (@"Data Source=RICARDO-PC\SQLEXPRESS; Initial Catalog= BD_adopt; integrated security=true");
             this.cnn = new SqlConnection(this.cadenaconexion);
         } 
         public string Mensaje
