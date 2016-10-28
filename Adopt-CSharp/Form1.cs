@@ -66,10 +66,5 @@ namespace Adopt_CSharp
         {
             this.Close();
         }
-
-        private void txtIngresar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
