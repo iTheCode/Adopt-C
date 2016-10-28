@@ -8,3 +8,13 @@ C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csp
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.pdb
 D:\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
+D:\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe
+D:\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.pdb
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csprojResolveAssemblyReference.cache
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Login.resources
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Panel.resources
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Perfil.resources
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Properties.Resources.resources
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csproj.GenerateResource.Cache
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe
+D:\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.pdb
