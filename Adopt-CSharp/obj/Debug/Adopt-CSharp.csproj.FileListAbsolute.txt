@@ -1,2 +1,10 @@
 c:\users\iluis\documents\visual studio 2015\Projects\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.pdb
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Login.Form1.resources
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Properties.Resources.resources
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csproj.GenerateResource.Cache
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.pdb
