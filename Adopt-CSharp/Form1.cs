@@ -30,7 +30,7 @@ namespace Adopt_CSharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Focus();
         }
 
         private void txtSalir_Click(object sender, EventArgs e)
@@ -73,9 +73,9 @@ namespace Adopt_CSharp
             try
             {
                 //creando la conexion
-                SqlConnection con = new SqlConnection(@"server=RICARDO-PC\SQLEXPRESS; Initial Catalog = BD_adopt; Integrated Security=True;");
+                //SqlConnection con = new SqlConnection(@"server=RICARDO-PC\SQLEXPRESS; Initial Catalog = BD_adopt; Integrated Security=True;");
                 //abriendo conexion
-                con.Open();
+                //con.Open();
                 SqlCommand comando = new SqlCommand("select nombre, apellido from cliente where nombre = '" + txtUsuario.Text + "'And apellido = '" + txtContraseña.Text + "' ", con);
                 //ejecuta una instruccion de sql devolviendo el numero de las filas afectadas
                 comando.ExecuteNonQuery();
