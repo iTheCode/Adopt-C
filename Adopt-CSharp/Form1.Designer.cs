@@ -49,12 +49,12 @@ namespace Adopt_CSharp
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(27, 111);
+            this.materialLabel1.Location = new System.Drawing.Point(30, 195);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(61, 19);
             this.materialLabel1.TabIndex = 18;
-            this.materialLabel1.Text = "Usuario :";
+            this.materialLabel1.Text = "Usuario";
             // 
             // materialLabel2
             // 
@@ -62,19 +62,19 @@ namespace Adopt_CSharp
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(2, 149);
+            this.materialLabel2.Location = new System.Drawing.Point(30, 241);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(94, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(86, 19);
             this.materialLabel2.TabIndex = 19;
-            this.materialLabel2.Text = "Contraseña :";
+            this.materialLabel2.Text = "Contraseña";
             // 
             // materialSingleLineTextField1
             // 
             this.materialSingleLineTextField1.BackColor = System.Drawing.Color.White;
             this.materialSingleLineTextField1.Depth = 0;
             this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(102, 107);
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(156, 191);
             this.materialSingleLineTextField1.MaxLength = 32767;
             this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
@@ -91,7 +91,7 @@ namespace Adopt_CSharp
             // 
             this.materialSingleLineTextField2.Depth = 0;
             this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(102, 145);
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(156, 237);
             this.materialSingleLineTextField2.MaxLength = 32767;
             this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
@@ -110,7 +110,7 @@ namespace Adopt_CSharp
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(13, 209);
+            this.materialFlatButton2.Location = new System.Drawing.Point(156, 306);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -127,7 +127,7 @@ namespace Adopt_CSharp
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(134, 209);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(52, 306);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -139,9 +139,11 @@ namespace Adopt_CSharp
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 27);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(243, 219);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -152,16 +154,18 @@ namespace Adopt_CSharp
             this.BackColor = System.Drawing.Color.Thistle;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(232, 257);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(318, 357);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialSingleLineTextField2);
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(318, 357);
+            this.MinimumSize = new System.Drawing.Size(318, 357);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

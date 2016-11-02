@@ -12,3 +12,4 @@ C:\Users\iLuis\Source\Repos\Adopt-CSharp\MaterialSkin\obj\Debug\MaterialSkin.Pro
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\MaterialSkin\obj\Debug\MaterialSkin.dll
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\MaterialSkin\obj\Debug\MaterialSkin.pdb
+C:\Users\iLuis\Source\Repos\Adopt-CSharp\MaterialSkin\obj\Debug\MaterialSkin.Controls.MaterialForm.resources

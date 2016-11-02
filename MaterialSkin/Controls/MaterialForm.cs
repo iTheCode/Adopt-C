@@ -569,6 +569,18 @@ namespace MaterialSkin.Controls
             //Form title
             g.DrawString(Text, SkinManager.ROBOTO_MEDIUM_12, SkinManager.ColorScheme.TextBrush, new Rectangle(SkinManager.FORM_PADDING, STATUS_BAR_HEIGHT, Width, ACTION_BAR_HEIGHT), new StringFormat { LineAlignment = StringAlignment.Center });
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // MaterialForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "MaterialForm";
+            this.ResumeLayout(false);
+
+        }
     }
 
     public class MouseMessageFilter : IMessageFilter

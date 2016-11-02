@@ -102,7 +102,9 @@ namespace Adopt_CSharp
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Registro r = new Registro();
+            r.Show();
         }
     }
 }
