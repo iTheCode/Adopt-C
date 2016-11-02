@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8EB7611B-68CD-4B8B-987A-11717E2B250C}</ProjectGuid>
+    <ProjectGuid>{E9E440D9-D151-4F54-85DA-AAD867FBED61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MaterialSkin</RootNamespace>
