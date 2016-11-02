@@ -23,3 +23,6 @@ C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Pan
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Registro.resources
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\MaterialSkin.dll
 C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\MaterialSkin.pdb
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.pdb
