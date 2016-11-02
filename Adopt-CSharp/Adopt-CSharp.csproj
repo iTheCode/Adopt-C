@@ -105,6 +105,9 @@
   <ItemGroup>
     <None Include="Resources\14876167_1142209042527256_508917393_o.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MaterialSkin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
