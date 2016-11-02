@@ -20,6 +20,8 @@ namespace Adopt_CSharp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
         }
 
+        BaseDeDatos bd = new BaseDeDatos();
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -68,36 +70,7 @@ namespace Adopt_CSharp
 
         private void label3_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                //creando la conexion
-                //SqlConnection con = new SqlConnection(@"server=RICARDO-PC\SQLEXPRESS; Initial Catalog = BD_adopt; Integrated Security=True;");
-                //abriendo conexion
-                //con.Open();
-                //SqlCommand comando = new SqlCommand("select nombre, apellido from cliente where nombre = '" + txtUsuario.Text + "'And apellido = '" + txtContraseña.Text + "' ", con);
-                //ejecuta una instruccion de sql devolviendo el numero de las filas afectadas
-                //comando.ExecuteNonQuery();
-                //DataSet ds = new DataSet();
-                //SqlDataAdapter da = new SqlDataAdapter(comando);
-                ////Llenando el dataAdapter
-                //da.Fill(ds, "cliente");
-                ////utilizado para representar una fila de la tabla q necesitas en este caso usuario
-                //DataRow DR;
-                //DR = ds.Tables["cliente"].Rows[0];
-                ////evaluando que la contraseña y usuario sean correctos
-                //if ((txtUsuario.Text == DR["nombre"].ToString()) || (txtContraseña.Text == DR["apellido"].ToString()))
-                //{
-                //    //abriendo el formulario principal
-                //    Panel p= new Panel();
-                //    p.Show();
-                //    this.Hide();//esto sirve para ocultar el formulario de login
-                //}
-            }
-            catch
-            {
-                //en caso que la contraseña sea erronea mostrara un mensaje
-                MessageBox.Show("Error! Su contraseña y/o usuario son invalidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+           
         }
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
@@ -105,6 +78,28 @@ namespace Adopt_CSharp
             this.Hide();
             Registro r = new Registro();
             r.Show();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            string usuario = bd.selectstring("select usuario from login where usuario = '" + txtusu.Text + "'");
+            string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + txtcontra.Text + "'");
+          
+                if (usuario == txtusu.Text && contraseña == txtcontra.Text)
+                {                    
+                    Panel p = new Panel();
+                    p.Show();
+                    this.Hide();
+                }          
+                else
+            {
+                MessageBox.Show("datos incorrectos!");
+            }  
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
