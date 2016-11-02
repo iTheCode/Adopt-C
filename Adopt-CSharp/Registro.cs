@@ -129,11 +129,11 @@ namespace Adopt_CSharp
             if (rbnmas.Checked)
             {
                 genero = "masculino";
-            }            
+            }
             string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fecha) values ('" + txtusu.Text + "','" + txtcontra.Text + "','" + txtnombre.Text + "','" +
-            txtapellido.Text + "','" + genero + "','" + dateTimePicker1.Text+ "')";
+            txtapellido.Text + "','" + genero + "','" + dateTimePicker1.Text + "')";
 
-            if(txtcontra.Text==txtccontra.Text & CheckBox1.Checked==true)
+            if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
             {
                 if (bd.executecommand(agregar))
                 {
@@ -154,7 +154,7 @@ namespace Adopt_CSharp
                 txtcontra.Clear();
                 txtccontra.Clear();
             }
-            
+
         }
 
         private void rbnfem_CheckedChanged(object sender, EventArgs e)

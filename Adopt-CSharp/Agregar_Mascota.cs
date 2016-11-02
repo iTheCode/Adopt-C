@@ -1,13 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace Adopt_CSharp
 {
-    public partial class Panel : MaterialForm
+    public partial class Agregar_Mascota : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        public Panel()
+        public Agregar_Mascota()
         {
             InitializeComponent();
             // Initialize MaterialSkinManager
@@ -15,39 +23,13 @@ namespace Adopt_CSharp
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
             this.Hide();
-            Agregar_Mascota add = new Agregar_Mascota();
-            add.Show();
+            Panel p = new Panel();
+            p.Show();
         }
     }
 }

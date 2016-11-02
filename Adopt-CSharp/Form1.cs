@@ -84,17 +84,17 @@ namespace Adopt_CSharp
         {
             string usuario = bd.selectstring("select usuario from login where usuario = '" + txtusu.Text + "'");
             string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + txtcontra.Text + "'");
-          
-                if (usuario == txtusu.Text && contraseña == txtcontra.Text)
-                {                    
-                    Panel p = new Panel();
-                    p.Show();
-                    this.Hide();
-                }          
-                else
+
+            if (usuario == txtusu.Text && contraseña == txtcontra.Text)
+            {
+                Panel p = new Panel();
+                p.Show();
+                this.Hide();
+            }
+            else
             {
                 MessageBox.Show("datos incorrectos!");
-            }  
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
