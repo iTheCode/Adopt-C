@@ -393,7 +393,7 @@ namespace MaterialSkin.Controls
                     buttonState = ButtonState.XOver;
 
                     if (oldState == ButtonState.XDown && up)
-                        Close();
+                        Application.Exit();
                 }
                 else buttonState = ButtonState.None;
             }
