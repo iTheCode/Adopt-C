@@ -35,8 +35,8 @@ namespace Adopt_CSharp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtusu = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtcontra = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -69,40 +69,40 @@ namespace Adopt_CSharp
             this.materialLabel2.TabIndex = 19;
             this.materialLabel2.Text = "Contraseña";
             // 
-            // materialSingleLineTextField1
+            // txtusu
             // 
-            this.materialSingleLineTextField1.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(156, 191);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(118, 23);
-            this.materialSingleLineTextField1.TabIndex = 20;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtusu.BackColor = System.Drawing.Color.White;
+            this.txtusu.Depth = 0;
+            this.txtusu.Hint = "";
+            this.txtusu.Location = new System.Drawing.Point(156, 191);
+            this.txtusu.MaxLength = 32767;
+            this.txtusu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtusu.Name = "txtusu";
+            this.txtusu.PasswordChar = '\0';
+            this.txtusu.SelectedText = "";
+            this.txtusu.SelectionLength = 0;
+            this.txtusu.SelectionStart = 0;
+            this.txtusu.Size = new System.Drawing.Size(118, 23);
+            this.txtusu.TabIndex = 20;
+            this.txtusu.TabStop = false;
+            this.txtusu.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // txtcontra
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(156, 237);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(118, 23);
-            this.materialSingleLineTextField2.TabIndex = 21;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtcontra.Depth = 0;
+            this.txtcontra.Hint = "";
+            this.txtcontra.Location = new System.Drawing.Point(156, 237);
+            this.txtcontra.MaxLength = 32767;
+            this.txtcontra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtcontra.Name = "txtcontra";
+            this.txtcontra.PasswordChar = '*';
+            this.txtcontra.SelectedText = "";
+            this.txtcontra.SelectionLength = 0;
+            this.txtcontra.SelectionStart = 0;
+            this.txtcontra.Size = new System.Drawing.Size(118, 23);
+            this.txtcontra.TabIndex = 21;
+            this.txtcontra.TabStop = false;
+            this.txtcontra.UseSystemPasswordChar = false;
             // 
             // materialFlatButton2
             // 
@@ -135,6 +135,7 @@ namespace Adopt_CSharp
             this.materialRaisedButton1.TabIndex = 23;
             this.materialRaisedButton1.Text = "Ingresar";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // pictureBox1
             // 
@@ -157,8 +158,8 @@ namespace Adopt_CSharp
             this.ClientSize = new System.Drawing.Size(318, 357);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtcontra);
+            this.Controls.Add(this.txtusu);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pictureBox1);
@@ -168,6 +169,7 @@ namespace Adopt_CSharp
             this.MinimumSize = new System.Drawing.Size(318, 357);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,8 +179,8 @@ namespace Adopt_CSharp
         #endregion
         private MaterialLabel materialLabel1;
         private MaterialLabel materialLabel2;
-        private MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSingleLineTextField txtusu;
+        private MaterialSingleLineTextField txtcontra;
         private MaterialFlatButton materialFlatButton2;
         private MaterialRaisedButton materialRaisedButton1;
         private PictureBox pictureBox1;
