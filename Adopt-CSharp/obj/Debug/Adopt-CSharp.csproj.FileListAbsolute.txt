@@ -26,3 +26,14 @@ C:\Users\iLuis\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\MaterialSkin.pdb
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.config
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.pdb
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.pdb
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\ConexcionBD.dll
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\MaterialSkin.dll
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\MaterialSkin.pdb
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Login.resources
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Panel.resources
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Properties.Resources.resources
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Registro.resources
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.csproj.GenerateResource.Cache

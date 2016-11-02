@@ -35,8 +35,7 @@ namespace Adopt_CSharp
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-            this.Close();
+            Application.Exit();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

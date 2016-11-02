@@ -35,16 +35,12 @@ namespace Adopt_CSharp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtusu = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtcontra = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -53,7 +49,7 @@ namespace Adopt_CSharp
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(59, 195);
+            this.materialLabel1.Location = new System.Drawing.Point(30, 195);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(61, 19);
@@ -66,47 +62,47 @@ namespace Adopt_CSharp
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(59, 241);
+            this.materialLabel2.Location = new System.Drawing.Point(30, 241);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(86, 19);
             this.materialLabel2.TabIndex = 19;
             this.materialLabel2.Text = "Contraseña";
             // 
-            // materialSingleLineTextField1
+            // txtusu
             // 
-            this.materialSingleLineTextField1.BackColor = System.Drawing.Color.White;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(156, 191);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(118, 23);
-            this.materialSingleLineTextField1.TabIndex = 20;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtusu.BackColor = System.Drawing.Color.White;
+            this.txtusu.Depth = 0;
+            this.txtusu.Hint = "";
+            this.txtusu.Location = new System.Drawing.Point(156, 191);
+            this.txtusu.MaxLength = 32767;
+            this.txtusu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtusu.Name = "txtusu";
+            this.txtusu.PasswordChar = '\0';
+            this.txtusu.SelectedText = "";
+            this.txtusu.SelectionLength = 0;
+            this.txtusu.SelectionStart = 0;
+            this.txtusu.Size = new System.Drawing.Size(118, 23);
+            this.txtusu.TabIndex = 20;
+            this.txtusu.TabStop = false;
+            this.txtusu.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // txtcontra
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(156, 237);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(118, 23);
-            this.materialSingleLineTextField2.TabIndex = 21;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtcontra.Depth = 0;
+            this.txtcontra.Hint = "";
+            this.txtcontra.Location = new System.Drawing.Point(156, 237);
+            this.txtcontra.MaxLength = 32767;
+            this.txtcontra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtcontra.Name = "txtcontra";
+            this.txtcontra.PasswordChar = '*';
+            this.txtcontra.SelectedText = "";
+            this.txtcontra.SelectionLength = 0;
+            this.txtcontra.SelectionStart = 0;
+            this.txtcontra.Size = new System.Drawing.Size(118, 23);
+            this.txtcontra.TabIndex = 21;
+            this.txtcontra.TabStop = false;
+            this.txtcontra.UseSystemPasswordChar = false;
             // 
             // materialFlatButton2
             // 
@@ -114,7 +110,7 @@ namespace Adopt_CSharp
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(162, 306);
+            this.materialFlatButton2.Location = new System.Drawing.Point(156, 306);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -131,7 +127,7 @@ namespace Adopt_CSharp
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(58, 306);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(52, 306);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -145,32 +141,12 @@ namespace Adopt_CSharp
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 219);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 195);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(37, 239);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 26;
-            this.pictureBox3.TabStop = false;
             // 
             // Login
             // 
@@ -180,26 +156,21 @@ namespace Adopt_CSharp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(318, 357);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtcontra);
+            this.Controls.Add(this.txtusu);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(318, 357);
             this.MinimumSize = new System.Drawing.Size(318, 357);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,13 +179,11 @@ namespace Adopt_CSharp
         #endregion
         private MaterialLabel materialLabel1;
         private MaterialLabel materialLabel2;
-        private MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSingleLineTextField txtusu;
+        private MaterialSingleLineTextField txtcontra;
         private MaterialFlatButton materialFlatButton2;
         private MaterialRaisedButton materialRaisedButton1;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
     }
 }
 
