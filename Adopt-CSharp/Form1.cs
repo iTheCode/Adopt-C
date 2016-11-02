@@ -106,5 +106,12 @@ namespace Adopt_CSharp
             Registro r = new Registro();
             r.Show();
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Panel p = new Panel();
+            p.Show();
+        }
     }
 }
