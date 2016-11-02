@@ -67,7 +67,6 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="usuarios.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\14876167_1142209042527256_508917393_o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{e9e440d9-d151-4f54-85da-aad867fbed61}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
