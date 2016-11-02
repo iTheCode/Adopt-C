@@ -4,29 +4,31 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Adopt_CSharp
 {
     class conexion
     {
-        public string cadenaconexion;
+        public string ccon;
         protected string sql;
         protected int res;
-        protected SqlConnection cnn;
-        protected SqlCommand comansql;
+        protected SqlConnection con;
+        protected SqlCommand comando;
         protected string mensaje;
 
-        public conexion()
+        public void Conexion()
         {
-            this.cadenaconexion = (@"Data Dource=RICARDO-PC\SQLEXPRESS; Initial catalog=BD_adopt; integrated security=true");
-            this.cnn = new SqlConnection(this.cadenaconexion);
-        } 
+            this.ccon = (@"server=RICARDO-PC\SQLEXPRESS; Initial Catalog = BD_adopt; Integrated Security=True;");
+            this.con = new SqlConnection(this.ccon);
+        }
+
         public string Mensaje
         {
-            get {
+            get
+            {
                 return this.mensaje;
             }
         }
-
     }
 }
