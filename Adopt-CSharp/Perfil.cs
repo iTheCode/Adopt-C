@@ -1,45 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace Adopt_CSharp
 {
-    public partial class Perfil : Form
+    public partial class Perfil : MaterialForm
     {
+        private readonly MaterialSkinManager materialSkinManager;
         public Perfil()
         {
             InitializeComponent();
+            // Initialize MaterialSkinManager
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+    private void perfil_mascota_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Perfil_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Panel p = new Panel();
+            p.Show();
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

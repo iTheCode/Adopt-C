@@ -63,9 +63,9 @@ namespace Adopt_CSharp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9edcb768b2a12114fbbfccd2191ef08d {
+        internal static System.Drawing.Bitmap _14876167_1142209042527256_508917393_o {
             get {
-                object obj = ResourceManager.GetObject("9edcb768b2a12114fbbfccd2191ef08d", resourceCulture);
+                object obj = ResourceManager.GetObject("14876167_1142209042527256_508917393_o", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Adopt_CSharp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9edcb768b2a12114fbbfccd2191ef08d1 {
+        internal static System.Drawing.Bitmap animals {
             get {
-                object obj = ResourceManager.GetObject("9edcb768b2a12114fbbfccd2191ef08d1", resourceCulture);
+                object obj = ResourceManager.GetObject("animals", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Adopt_CSharp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9edcb768b2a12114fbbfccd2191ef08d2 {
+        internal static System.Drawing.Bitmap arrow_left {
             get {
-                object obj = ResourceManager.GetObject("9edcb768b2a12114fbbfccd2191ef08d2", resourceCulture);
+                object obj = ResourceManager.GetObject("arrow-left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
