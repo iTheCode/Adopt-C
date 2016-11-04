@@ -1,46 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.IO;
+using System.Drawing;
 
 namespace Adopt_CSharp
 {
-    public partial class Agregar_Mascota : MaterialForm
+    public partial class Editar_Mascota : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-
-        public Agregar_Mascota()
+        public Editar_Mascota()
         {
-            InitializeComponent();
+            InitializeComponent();            
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
+
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        public Image Base64ToImage(string base64String)
         {
-            this.Hide();
-            Panel p = new Panel();
-            p.Show();
-        }
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,
+              imageBytes.Length);
 
-        private void materialSingleLineTextField4_Click(object sender, EventArgs e)
-        {
-
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
         }
         public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
         {
-            //Convertir Imagen a Base 64
             using (MemoryStream ms = new MemoryStream())
             {
                 // Convert Image to byte[]
@@ -52,34 +45,19 @@ namespace Adopt_CSharp
                 return base64String;
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Editar_Mascota_Load(object sender, EventArgs e)
         {
-            //Acá insertas al sql todo
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
             this.Hide();
+            Panel p = new Panel();
+            p.Show();
         }
 
-        private void materialLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialSingleLineTextField3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialSingleLineTextField8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -94,7 +72,12 @@ namespace Adopt_CSharp
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
 
         }
+
     }
 }

@@ -49,5 +49,22 @@ namespace Adopt_CSharp
             Agregar_Mascota add = new Agregar_Mascota();
             add.Show();
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Perfil_Mascota perfil = new Perfil_Mascota();
+            perfil.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
