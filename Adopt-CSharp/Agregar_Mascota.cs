@@ -96,5 +96,30 @@ namespace Adopt_CSharp
             }
 
         }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

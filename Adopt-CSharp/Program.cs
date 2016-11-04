@@ -17,7 +17,7 @@ namespace Adopt_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Panel());
+            Application.Run(new Agregar_Mascota());
         }
     }
 }
