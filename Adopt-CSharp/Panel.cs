@@ -17,53 +17,34 @@ namespace Adopt_CSharp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            Agregar_Mascota add = new Agregar_Mascota();
-            add.Show();
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        private void Ver_Perfil(int num_perfil)
         {
             this.Hide();
             Perfil_Mascota perfil = new Perfil_Mascota();
             perfil.Show();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void materialRaisedButton5_Click(object sender, EventArgs e)
+
+        private void pictureBox9_Click_2(object sender, EventArgs e)
         {
+            //Ocultar Tablero
+            pictureBox9.Hide();
+            pictureBox3.Show();
+            materialTabSelector1.Hide();
+            materialTabSelector1.Visible = false;
+            materialTabControl1.Visible = false;
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
+            pictureBox9.Show();
+            pictureBox3.Hide();
+            // Mostrar tablero
+            materialTabSelector1.Show();
+            materialTabSelector1.Visible = true;
+            materialTabControl1.Visible = true;
 
         }
     }
