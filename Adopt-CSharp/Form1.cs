@@ -20,7 +20,7 @@ namespace Adopt_CSharp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
         }
 
-        //BaseDeDatos bd = new BaseDeDatos();
+        BaseDeDatos bd = new BaseDeDatos();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -82,19 +82,19 @@ namespace Adopt_CSharp
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            //string usuario = bd.selectstring("select usuario from login where usuario = '" + txtusu.Text + "'");
-            //string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + txtcontra.Text + "'");
-
-            //if (usuario == txtusu.Text && contraseña == txtcontra.Text)
-            //{
-            //    Panel p = new Panel();
-            //    p.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("datos incorrectos!");
-            //}
+            string usuario = bd.selectstring("select  usuario from login where usuario = '" + txtusu.Text + "'");
+            string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + txtcontra.Text + "'");
+            int id_usuario = Int32.Parse(bd.selectstring("select id_usuario from login where usuario = '" + txtusu.Text + "'"));
+            if (usuario == txtusu.Text && contraseña == txtcontra.Text)
+            {
+                Panel p = new Panel(id_usuario);
+                p.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario o Contraseña ingresados son incorrectos.");
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
