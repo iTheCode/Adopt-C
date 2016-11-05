@@ -16,8 +16,11 @@ namespace Adopt_CSharp
     public partial class Perfil_Mascota : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        public Perfil_Mascota()
+        private int id_usuario, id_animal;
+        public Perfil_Mascota(int id_usuario, int id_animal)
         {
+            this.id_usuario = id_usuario;
+            this.id_animal = id_animal;
             InitializeComponent();
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
@@ -33,7 +36,7 @@ namespace Adopt_CSharp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Panel p = new Panel();
+            Panel p = new Panel(this.id_usuario);
             p.Show();
         }
 
@@ -50,7 +53,7 @@ namespace Adopt_CSharp
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Editar_Mascota ed = new Editar_Mascota();
+            Editar_Mascota ed = new Editar_Mascota(this.id_usuario, this.id_animal);
             ed.Show();
         }
     }

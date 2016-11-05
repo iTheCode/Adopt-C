@@ -7,8 +7,11 @@ namespace Adopt_CSharp
     public partial class Panel : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        public Panel()
+        private int id_usuario;
+
+        public Panel(int id_usuario)
         {
+            this.id_usuario = id_usuario;
             InitializeComponent();
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
@@ -20,7 +23,7 @@ namespace Adopt_CSharp
         private void Ver_Perfil(int num_perfil)
         {
             this.Hide();
-            Perfil_Mascota perfil = new Perfil_Mascota();
+            Perfil_Mascota perfil = new Perfil_Mascota(this.id_usuario, num_perfil);
             perfil.Show();
 
         }
@@ -45,6 +48,16 @@ namespace Adopt_CSharp
             materialTabSelector1.Show();
             materialTabSelector1.Visible = true;
             materialTabControl1.Visible = true;
+
+        }
+
+        private void materialDivider1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox36_Click(object sender, EventArgs e)
+        {
 
         }
     }

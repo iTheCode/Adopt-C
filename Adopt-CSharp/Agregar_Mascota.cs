@@ -16,9 +16,11 @@ namespace Adopt_CSharp
     public partial class Agregar_Mascota : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
+        private int id_usuario;
 
-        public Agregar_Mascota()
+        public Agregar_Mascota(int id_usuario)
         {
+            this.id_usuario = id_usuario;
             InitializeComponent();
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
@@ -30,7 +32,7 @@ namespace Adopt_CSharp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Panel p = new Panel();
+            Panel p = new Panel(this.id_usuario);
             p.Show();
         }
 
