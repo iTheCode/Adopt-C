@@ -41,6 +41,20 @@ namespace Adopt_CSharp
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
+            pictureBox35.Visible = false;
+            pictureBox36.Visible = false;
+            materialLabel16.Visible = false;
+            materialFlatButton2.Visible = false;
+            materialFlatButton3.Visible = false;
+            materialFlatButton4.Visible = false;
+            materialDivider1.Visible = false;
+            materialFlatButton5.Visible = false;
+            materialFlatButton6.Visible = false;
+            materialFlatButton7.Visible = false;
+            materialDivider2.Visible = false;
+            pictureBox34.Visible = false;
+            pictureBox37.Visible = false;
+            pictureBox1.Visible = true;
 
             pictureBox9.Show();
             pictureBox3.Hide();
@@ -59,6 +73,57 @@ namespace Adopt_CSharp
         private void pictureBox36_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Agregar_Mascota add = new Agregar_Mascota(1);
+            add.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox35.Visible = true;
+            pictureBox36.Visible = true;
+            materialLabel16.Visible = true;
+            materialFlatButton2.Visible = true;
+            materialFlatButton3.Visible = true;
+            materialFlatButton4.Visible = true;
+            materialDivider1.Visible = true;
+            materialFlatButton5.Visible = true;
+            materialFlatButton6.Visible = true;
+            materialFlatButton7.Visible = true;
+            materialDivider2.Visible = true;
+            pictureBox34.Visible = true;
+            pictureBox37.Visible = true;
+            pictureBox1.Visible = false;
+        }
+
+        private void pictureBox37_Click(object sender, EventArgs e)
+        {
+
+            pictureBox35.Visible = false;
+            pictureBox36.Visible = false;
+            materialLabel16.Visible = false;
+            materialFlatButton2.Visible = false;
+            materialFlatButton3.Visible = false;
+            materialFlatButton4.Visible = false;
+            materialDivider1.Visible = false;
+            materialFlatButton5.Visible = false;
+            materialFlatButton6.Visible = false;
+            materialFlatButton7.Visible = false;
+            materialDivider2.Visible = false;
+            pictureBox34.Visible = false;
+            pictureBox37.Visible = false;
+            pictureBox1.Visible = true;
+        }
+
+        private void materialFlatButton7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Show();
         }
     }
 }

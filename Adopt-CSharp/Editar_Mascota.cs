@@ -4,6 +4,7 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.IO;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace Adopt_CSharp
 {
@@ -11,7 +12,7 @@ namespace Adopt_CSharp
     {
         private readonly MaterialSkinManager materialSkinManager;
         private int id_usuario, id_animal;
-        public int id;
+        private string imagen, image64;
         public Editar_Mascota(int id_usuario, int id_animal)
         {
             this.id_usuario = id_usuario;
@@ -25,6 +26,7 @@ namespace Adopt_CSharp
 
         }
         BaseDeDatos bd = new BaseDeDatos();
+
         public Image Base64ToImage(string base64String)
         {
             // Convert Base64 String to byte[]
@@ -37,8 +39,9 @@ namespace Adopt_CSharp
             Image image = Image.FromStream(ms, true);
             return image;
         }
-        public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
+        public string ImageToBase64(Image image, ImageFormat format)
         {
+            //Convertir Imagen a Base 64
             using (MemoryStream ms = new MemoryStream())
             {
                 // Convert Image to byte[]
@@ -68,9 +71,13 @@ namespace Adopt_CSharp
             {
                 if (openFileDialog2.ShowDialog() == DialogResult.OK)
                 {
-                    string imagen = openFileDialog2.FileName;
+                    imagen = openFileDialog2.FileName;
                     pictureBox4.Image = Image.FromFile(imagen);
                     pictureBox5.Image = Image.FromFile(imagen);
+
+                    ImageFormat thisFormat = pictureBox4.Image.RawFormat;
+
+                    image64 = ImageToBase64(pictureBox4.Image, thisFormat);
                 }
             }
             catch (Exception ex)
@@ -81,37 +88,28 @@ namespace Adopt_CSharp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = true;
-            dataGridView1.DataSource = bd.SelectDataTable("select * from ani");
-
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            id = Convert.ToInt16(this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            txtnombre.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtraza.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtedad.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtcategoria.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txthistoria.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtubicacion.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            dataGridView1.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string modificar = "update ani set nombre ='" + txtnombre.Text + "',raza='" + txtraza.Text + "',edad=" + txtedad.Text + ",categoria='" + txtcategoria.Text + "',historia='" + txthistoria.Text + "',ubicacion='" + txtubicacion.Text + "' where id = " + id + "";
-            if (bd.executecommand(modificar))
+            string modificar = "update animales set nombre ='" + txtnombre.Text + "',raza='" + txtraza.Text + "',edad=" + txtedad.Text + ",tipo='" + txtcategoria.Text + "',informacion='" + txthistoria.Text + "',ubicacion='" + txtubicacion.Text + "' where id = " + id_animal + "";
+            string modificar_image = "update img set img ='" + image64 + "' where id_animales = '" + id_animal + "'";
+            if (bd.executecommand(modificar) && bd.executecommand(modificar_image))
             {
                 MessageBox.Show("modificado");
-                dataGridView1.DataSource = bd.SelectDataTable("select * from ani");
-                Perfil_Mascota p = new Perfil_Mascota(1,1);
+                Perfil_Mascota p = new Perfil_Mascota(this.id_usuario,this.id_animal);
                 p.lblnombre.Text = txtnombre.Text;
                 p.lblraza.Text = txtraza.Text;
                 p.lbledad.Text = txtedad.Text;
                 p.lblcategoria.Text = txtcategoria.Text;
                 p.lblubicacion.Text = txtubicacion.Text;
+                p.pictureBox4.Image = Image.FromFile(imagen);
+                p.pictureBox5.Image = Image.FromFile(imagen);
             
                 p.Show();               
                 this.Hide();

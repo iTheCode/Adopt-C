@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.IO;
-using System.Data.SqlClient;
+using System.Globalization;
+using System.Drawing.Imaging;
+
 namespace Adopt_CSharp
 {
     public partial class Agregar_Mascota : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
         private int id_usuario;
+        private string image64;
 
         public Agregar_Mascota(int id_usuario)
         {
@@ -29,6 +26,8 @@ namespace Adopt_CSharp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
         }
         BaseDeDatos am = new BaseDeDatos();
+        private string imagen;
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -40,7 +39,7 @@ namespace Adopt_CSharp
         {
 
         }
-        public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
+        public string ImageToBase64(Image image, ImageFormat format)
         {
             //Convertir Imagen a Base 64
             using (MemoryStream ms = new MemoryStream())
@@ -54,7 +53,28 @@ namespace Adopt_CSharp
                 return base64String;
             }
         }
-     
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (openFileDialog2.ShowDialog() == DialogResult.OK)
+                {
+                    imagen = openFileDialog2.FileName;
+                    pictureBox4.Image = Image.FromFile(imagen);
+                    pictureBox5.Image = Image.FromFile(imagen);
+
+                    ImageFormat thisFormat = pictureBox4.Image.RawFormat;
+
+                    image64 = ImageToBase64(pictureBox4.Image, thisFormat);
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
+
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -92,17 +112,26 @@ namespace Adopt_CSharp
             }
             else
             {
-                string agregar = " insert into ani(nombre,raza,edad,categoria,historia,ubicacion) values ('" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "')";
+                string agregar = "insert into animales (nombre,raza,edad,tipo,informacion,ubicacion) values ('" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "')";
                 if (am.executecommand(agregar))
                 {
-                    MessageBox.Show("mascota agregada");
-                    Perfil_Mascota p = new Perfil_Mascota(1, 1);
-                    p.lblnombre.Text = txtnombre.Text;
-                    p.lblraza.Text = txtraza.Text;
-                    p.lbledad.Text = txtedad.Text;
-                    p.lblcategoria.Text = txtcategoria.Text;
-                    p.lblubicacion.Text = txtubicacion.Text;
-                    p.Show();
+
+
+                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where nombre = '" + txtnombre.Text + "'"));
+                    string image = "insert into img (id_animales, img) values ('" + id_animales + "', '" + image64 + "')";
+                    if (am.executecommand(image))
+                    {
+                        MessageBox.Show("mascota agregada");
+                        Perfil_Mascota p = new Perfil_Mascota(this.id_usuario, id_animales);
+                        p.lblnombre.Text = txtnombre.Text;
+                        p.lblraza.Text = txtraza.Text;
+                        p.lbledad.Text = txtedad.Text;
+                        p.lblcategoria.Text = txtcategoria.Text;
+                        p.lblubicacion.Text = txtubicacion.Text;
+                        p.pictureBox4.Image = Image.FromFile(imagen);
+                        p.pictureBox4.Image = Image.FromFile(imagen);
+                        p.Show();
+                    }
                 }
                 else
                 {
@@ -110,83 +139,17 @@ namespace Adopt_CSharp
                 }
                 this.Hide();
             }
-            //Perfil_Mascota pe = new Perfil_Mascota(1,1);
-            //txtnombre.Text=
 
         }
 
-        private void materialLabel3_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void materialSingleLineTextField3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void materialLabel8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialSingleLineTextField8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (openFileDialog2.ShowDialog() == DialogResult.OK)
-                {
-                    string imagen = openFileDialog2.FileName;
-                    pictureBox4.Image = Image.FromFile(imagen);
-                    pictureBox5.Image = Image.FromFile(imagen);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
-            }
-
-        }
-
-        private void materialLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialSingleLineTextField5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialSingleLineTextField2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void materialTabSelector1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            next ab = new next();
-            ab.Show();
-        }
     }
 }

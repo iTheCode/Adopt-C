@@ -127,8 +127,9 @@
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.pictureBox37 = new System.Windows.Forms.PictureBox();
+            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.materialTabControl1.SuspendLayout();
@@ -171,6 +172,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -184,6 +186,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // materialRaisedButton4
             // 
@@ -191,7 +194,7 @@
             this.materialRaisedButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton4.Depth = 0;
             this.materialRaisedButton4.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton4.Icon")));
-            this.materialRaisedButton4.Location = new System.Drawing.Point(110, 633);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(39, 499);
             this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton4.Name = "materialRaisedButton4";
             this.materialRaisedButton4.Primary = true;
@@ -205,7 +208,7 @@
             this.materialRaisedButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton5.Depth = 0;
             this.materialRaisedButton5.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton5.Icon")));
-            this.materialRaisedButton5.Location = new System.Drawing.Point(371, 633);
+            this.materialRaisedButton5.Location = new System.Drawing.Point(384, 499);
             this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton5.Name = "materialRaisedButton5";
             this.materialRaisedButton5.Primary = true;
@@ -219,7 +222,7 @@
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(210, 633);
+            this.materialFlatButton1.Location = new System.Drawing.Point(175, 499);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -250,11 +253,11 @@
             this.materialTabControl1.Controls.Add(this.tabPage4);
             this.materialTabControl1.Controls.Add(this.tabPage5);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(12, 103);
+            this.materialTabControl1.Location = new System.Drawing.Point(12, 109);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(477, 529);
+            this.materialTabControl1.Size = new System.Drawing.Size(477, 572);
             this.materialTabControl1.TabIndex = 27;
             this.materialTabControl1.Visible = false;
             // 
@@ -274,11 +277,14 @@
             this.tabPage1.Controls.Add(this.materialRaisedButton2);
             this.tabPage1.Controls.Add(this.materialLabel3);
             this.tabPage1.Controls.Add(this.pictureBox4);
+            this.tabPage1.Controls.Add(this.materialRaisedButton5);
+            this.tabPage1.Controls.Add(this.materialFlatButton1);
             this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.materialRaisedButton4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(469, 503);
+            this.tabPage1.Size = new System.Drawing.Size(469, 546);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Todos";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1312,7 +1318,7 @@
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
             this.pictureBox34.Location = new System.Drawing.Point(0, 63);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(250, 591);
+            this.pictureBox34.Size = new System.Drawing.Size(250, 618);
             this.pictureBox34.TabIndex = 38;
             this.pictureBox34.TabStop = false;
             this.pictureBox34.Visible = false;
@@ -1334,6 +1340,7 @@
             this.materialFlatButton2.Text = "Agregar Mascota";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             this.materialFlatButton2.Visible = false;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // pictureBox35
             // 
@@ -1366,6 +1373,7 @@
             this.pictureBox36.Location = new System.Drawing.Point(147, 109);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 42;
             this.pictureBox36.TabStop = false;
             this.pictureBox36.Visible = false;
@@ -1452,23 +1460,6 @@
             this.materialFlatButton6.UseVisualStyleBackColor = true;
             this.materialFlatButton6.Visible = false;
             // 
-            // materialFlatButton7
-            // 
-            this.materialFlatButton7.AutoSize = true;
-            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton7.Depth = 0;
-            this.materialFlatButton7.Icon = null;
-            this.materialFlatButton7.Location = new System.Drawing.Point(30, 574);
-            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton7.Name = "materialFlatButton7";
-            this.materialFlatButton7.Primary = false;
-            this.materialFlatButton7.Size = new System.Drawing.Size(181, 36);
-            this.materialFlatButton7.TabIndex = 48;
-            this.materialFlatButton7.Text = "materialFlatButton7";
-            this.materialFlatButton7.UseVisualStyleBackColor = true;
-            this.materialFlatButton7.Visible = false;
-            // 
             // materialDivider2
             // 
             this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -1481,13 +1472,45 @@
             this.materialDivider2.Text = "materialDivider2";
             this.materialDivider2.Visible = false;
             // 
+            // pictureBox37
+            // 
+            this.pictureBox37.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox37.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox37.Image")));
+            this.pictureBox37.Location = new System.Drawing.Point(20, 33);
+            this.pictureBox37.Name = "pictureBox37";
+            this.pictureBox37.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox37.TabIndex = 50;
+            this.pictureBox37.TabStop = false;
+            this.pictureBox37.Visible = false;
+            this.pictureBox37.Click += new System.EventHandler(this.pictureBox37_Click);
+            // 
+            // materialFlatButton7
+            // 
+            this.materialFlatButton7.AutoSize = true;
+            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.Depth = 0;
+            this.materialFlatButton7.Icon = ((System.Drawing.Image)(resources.GetObject("materialFlatButton7.Icon")));
+            this.materialFlatButton7.Location = new System.Drawing.Point(30, 574);
+            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton7.Name = "materialFlatButton7";
+            this.materialFlatButton7.Primary = false;
+            this.materialFlatButton7.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton7.TabIndex = 48;
+            this.materialFlatButton7.Text = "Cerrar sesión";
+            this.materialFlatButton7.UseVisualStyleBackColor = true;
+            this.materialFlatButton7.Visible = false;
+            this.materialFlatButton7.Click += new System.EventHandler(this.materialFlatButton7_Click);
+            // 
             // Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(501, 681);
-            this.Controls.Add(this.materialDivider2);
+            this.Controls.Add(this.materialTabControl1);
+            this.Controls.Add(this.pictureBox37);
             this.Controls.Add(this.materialFlatButton7);
             this.Controls.Add(this.materialFlatButton6);
             this.Controls.Add(this.materialFlatButton5);
@@ -1500,12 +1523,9 @@
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.materialRaisedButton5);
-            this.Controls.Add(this.materialRaisedButton4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.pictureBox34);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1562,6 +1582,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1659,14 +1680,15 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox pictureBox35;
-        private MaterialSkin.Controls.MaterialLabel materialLabel16;
-        private System.Windows.Forms.PictureBox pictureBox36;
+        public MaterialSkin.Controls.MaterialLabel materialLabel16;
+        public System.Windows.Forms.PictureBox pictureBox36;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.PictureBox pictureBox37;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
     }
 }

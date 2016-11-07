@@ -47,7 +47,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtubicacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,7 +77,6 @@
             this.materialTabSelector1.Size = new System.Drawing.Size(504, 46);
             this.materialTabSelector1.TabIndex = 74;
             this.materialTabSelector1.Text = "materialTabSelector1";
-            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
             // 
             // materialTabControl1
             // 
@@ -86,7 +84,7 @@
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Controls.Add(this.tabPage3);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(12, 324);
+            this.materialTabControl1.Location = new System.Drawing.Point(12, 314);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
@@ -170,7 +168,6 @@
             this.materialLabel3.Size = new System.Drawing.Size(42, 19);
             this.materialLabel3.TabIndex = 4;
             this.materialLabel3.Text = "Edad";
-            this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click_1);
             // 
             // txtraza
             // 
@@ -188,7 +185,6 @@
             this.txtraza.TabIndex = 3;
             this.txtraza.TabStop = false;
             this.txtraza.UseSystemPasswordChar = false;
-            this.txtraza.Click += new System.EventHandler(this.materialSingleLineTextField2_Click);
             // 
             // materialLabel2
             // 
@@ -202,7 +198,6 @@
             this.materialLabel2.Size = new System.Drawing.Size(41, 19);
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Raza";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // txtnombre
             // 
@@ -262,7 +257,6 @@
             this.txthistoria.TabIndex = 9;
             this.txthistoria.TabStop = false;
             this.txthistoria.UseSystemPasswordChar = false;
-            this.txthistoria.Click += new System.EventHandler(this.materialSingleLineTextField5_Click);
             // 
             // materialLabel5
             // 
@@ -276,7 +270,6 @@
             this.materialLabel5.Size = new System.Drawing.Size(63, 19);
             this.materialLabel5.TabIndex = 8;
             this.materialLabel5.Text = "Historia";
-            this.materialLabel5.Click += new System.EventHandler(this.materialLabel5_Click);
             // 
             // tabPage3
             // 
@@ -318,16 +311,6 @@
             this.materialLabel6.Size = new System.Drawing.Size(76, 19);
             this.materialLabel6.TabIndex = 8;
             this.materialLabel6.Text = "Ubicacion";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(375, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "next";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox6
             // 
@@ -377,11 +360,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(-2, 64);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(504, 207);
-            this.pictureBox4.MinimumSize = new System.Drawing.Size(504, 207);
+            this.pictureBox4.Location = new System.Drawing.Point(-2, 59);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(504, 207);
+            this.pictureBox4.Size = new System.Drawing.Size(504, 259);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 67;
             this.pictureBox4.TabStop = false;
@@ -391,7 +372,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 681);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.pictureBox6);
@@ -447,6 +427,5 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtubicacion;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private System.Windows.Forms.Button button1;
     }
 }
