@@ -37,21 +37,24 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtcategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtedad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtraza = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtnombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txthistoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtubicacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +64,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -97,6 +101,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox4
             // 
@@ -140,13 +145,13 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.materialSingleLineTextField4);
+            this.tabPage1.Controls.Add(this.txtcategoria);
             this.tabPage1.Controls.Add(this.materialLabel4);
-            this.tabPage1.Controls.Add(this.materialSingleLineTextField3);
+            this.tabPage1.Controls.Add(this.txtedad);
             this.tabPage1.Controls.Add(this.materialLabel3);
-            this.tabPage1.Controls.Add(this.materialSingleLineTextField2);
+            this.tabPage1.Controls.Add(this.txtraza);
             this.tabPage1.Controls.Add(this.materialLabel2);
-            this.tabPage1.Controls.Add(this.materialSingleLineTextField1);
+            this.tabPage1.Controls.Add(this.txtnombre);
             this.tabPage1.Controls.Add(this.materialLabel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -155,22 +160,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informacion";
             // 
-            // materialSingleLineTextField4
+            // txtcategoria
             // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(19, 222);
-            this.materialSingleLineTextField4.MaxLength = 32767;
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField4.TabIndex = 7;
-            this.materialSingleLineTextField4.TabStop = false;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            this.txtcategoria.Depth = 0;
+            this.txtcategoria.Hint = "";
+            this.txtcategoria.Location = new System.Drawing.Point(19, 222);
+            this.txtcategoria.MaxLength = 32767;
+            this.txtcategoria.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtcategoria.Name = "txtcategoria";
+            this.txtcategoria.PasswordChar = '\0';
+            this.txtcategoria.SelectedText = "";
+            this.txtcategoria.SelectionLength = 0;
+            this.txtcategoria.SelectionStart = 0;
+            this.txtcategoria.Size = new System.Drawing.Size(401, 23);
+            this.txtcategoria.TabIndex = 7;
+            this.txtcategoria.TabStop = false;
+            this.txtcategoria.UseSystemPasswordChar = false;
             // 
             // materialLabel4
             // 
@@ -185,22 +190,22 @@
             this.materialLabel4.TabIndex = 6;
             this.materialLabel4.Text = "Categoria";
             // 
-            // materialSingleLineTextField3
+            // txtedad
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(19, 159);
-            this.materialSingleLineTextField3.MaxLength = 32767;
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField3.TabIndex = 5;
-            this.materialSingleLineTextField3.TabStop = false;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.txtedad.Depth = 0;
+            this.txtedad.Hint = "";
+            this.txtedad.Location = new System.Drawing.Point(19, 159);
+            this.txtedad.MaxLength = 32767;
+            this.txtedad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtedad.Name = "txtedad";
+            this.txtedad.PasswordChar = '\0';
+            this.txtedad.SelectedText = "";
+            this.txtedad.SelectionLength = 0;
+            this.txtedad.SelectionStart = 0;
+            this.txtedad.Size = new System.Drawing.Size(401, 23);
+            this.txtedad.TabIndex = 5;
+            this.txtedad.TabStop = false;
+            this.txtedad.UseSystemPasswordChar = false;
             // 
             // materialLabel3
             // 
@@ -215,22 +220,22 @@
             this.materialLabel3.TabIndex = 4;
             this.materialLabel3.Text = "Edad";
             // 
-            // materialSingleLineTextField2
+            // txtraza
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(19, 97);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField2.TabIndex = 3;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtraza.Depth = 0;
+            this.txtraza.Hint = "";
+            this.txtraza.Location = new System.Drawing.Point(19, 97);
+            this.txtraza.MaxLength = 32767;
+            this.txtraza.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtraza.Name = "txtraza";
+            this.txtraza.PasswordChar = '\0';
+            this.txtraza.SelectedText = "";
+            this.txtraza.SelectionLength = 0;
+            this.txtraza.SelectionStart = 0;
+            this.txtraza.Size = new System.Drawing.Size(401, 23);
+            this.txtraza.TabIndex = 3;
+            this.txtraza.TabStop = false;
+            this.txtraza.UseSystemPasswordChar = false;
             // 
             // materialLabel2
             // 
@@ -245,22 +250,22 @@
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Raza";
             // 
-            // materialSingleLineTextField1
+            // txtnombre
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(19, 42);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField1.TabIndex = 1;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtnombre.Depth = 0;
+            this.txtnombre.Hint = "";
+            this.txtnombre.Location = new System.Drawing.Point(19, 42);
+            this.txtnombre.MaxLength = 32767;
+            this.txtnombre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.PasswordChar = '\0';
+            this.txtnombre.SelectedText = "";
+            this.txtnombre.SelectionLength = 0;
+            this.txtnombre.SelectionStart = 0;
+            this.txtnombre.Size = new System.Drawing.Size(401, 23);
+            this.txtnombre.TabIndex = 1;
+            this.txtnombre.TabStop = false;
+            this.txtnombre.UseSystemPasswordChar = false;
             // 
             // materialLabel1
             // 
@@ -278,7 +283,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.materialSingleLineTextField5);
+            this.tabPage2.Controls.Add(this.txthistoria);
             this.tabPage2.Controls.Add(this.materialLabel5);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -287,22 +292,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Historia";
             // 
-            // materialSingleLineTextField5
+            // txthistoria
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(25, 35);
-            this.materialSingleLineTextField5.MaxLength = 32767;
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField5.TabIndex = 9;
-            this.materialSingleLineTextField5.TabStop = false;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.txthistoria.Depth = 0;
+            this.txthistoria.Hint = "";
+            this.txthistoria.Location = new System.Drawing.Point(25, 35);
+            this.txthistoria.MaxLength = 32767;
+            this.txthistoria.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txthistoria.Name = "txthistoria";
+            this.txthistoria.PasswordChar = '\0';
+            this.txthistoria.SelectedText = "";
+            this.txthistoria.SelectionLength = 0;
+            this.txthistoria.SelectionStart = 0;
+            this.txthistoria.Size = new System.Drawing.Size(401, 23);
+            this.txthistoria.TabIndex = 9;
+            this.txthistoria.TabStop = false;
+            this.txthistoria.UseSystemPasswordChar = false;
             // 
             // materialLabel5
             // 
@@ -320,7 +325,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.materialSingleLineTextField6);
+            this.tabPage3.Controls.Add(this.txtubicacion);
             this.tabPage3.Controls.Add(this.materialLabel6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -328,22 +333,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Contactos";
             // 
-            // materialSingleLineTextField6
+            // txtubicacion
             // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(22, 35);
-            this.materialSingleLineTextField6.MaxLength = 32767;
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(401, 23);
-            this.materialSingleLineTextField6.TabIndex = 9;
-            this.materialSingleLineTextField6.TabStop = false;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.txtubicacion.Depth = 0;
+            this.txtubicacion.Hint = "";
+            this.txtubicacion.Location = new System.Drawing.Point(22, 35);
+            this.txtubicacion.MaxLength = 32767;
+            this.txtubicacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.PasswordChar = '\0';
+            this.txtubicacion.SelectedText = "";
+            this.txtubicacion.SelectionLength = 0;
+            this.txtubicacion.SelectionStart = 0;
+            this.txtubicacion.Size = new System.Drawing.Size(401, 23);
+            this.txtubicacion.TabIndex = 9;
+            this.txtubicacion.TabStop = false;
+            this.txtubicacion.UseSystemPasswordChar = false;
             // 
             // materialLabel6
             // 
@@ -369,11 +374,43 @@
             this.materialTabSelector1.TabIndex = 90;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(108, 629);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 91;
+            this.button1.Text = "buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 54);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(504, 198);
+            this.dataGridView1.TabIndex = 92;
+            this.dataGridView1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(287, 629);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 93;
+            this.button2.Text = "seleccionar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Editar_Mascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 681);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.pictureBox5);
@@ -401,6 +438,7 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,20 +453,23 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtcategoria;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtedad;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtraza;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.TabPage tabPage2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txthistoria;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.TabPage tabPage3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
+        private System.Windows.Forms.Button button1;
+        public MaterialSkin.Controls.MaterialSingleLineTextField txtubicacion;
+        public MaterialSkin.Controls.MaterialSingleLineTextField txtnombre;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
     }
 }

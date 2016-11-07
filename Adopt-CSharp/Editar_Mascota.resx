@@ -120,11 +120,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAGYktHRAAAAAAAAPlDu38AAAAJdnBBZwAAADAAAAAwAM7ujFcAAACpSURBVGhD7dcxCsMwEAVR
-        3SsXS6rkzLmAMoIVqLAbE6NdmAcubIyYD27cJEm6S+/9wfWM21oi/ss1vONxDQSv8VONEYQexQ+feCUv
-        Io3fgkjjtyDS+C2INH4LIo3fgsiz+NtFwnWcsS1+iIzrOKP2gIFz6n5CE2edjajzs0KsI1Ig1hEpEOuI
-        FIh1RArEOiIFYo9G5P9vWBG8jqgVPxE+RrziVpKkP2vtB2+Yk3cLTQ3hAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAKlJREFUaEPt
+        1zEKwzAQBVHdKxdLquTMuYAyghWosBsTo12YBy5sjJgPbtwkSbpL7/3B9YzbWiL+yzW843ENBK/xU40R
+        hB7FD594JS8ijd+CSOO3INL4LYg0fgsijd+CyLP420XCdZyxLX6IjOs4o/aAgXPqfkITZ52NqPOzQqwj
+        UiDWESkQ64gUiHVECsQ6IgVij0bk/29YEbyOqBU/ET5GvOJWkqQ/a+0Hb5iTdwtNDeEAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -265,10 +265,10 @@
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACFSURBVEhL7ZFLDoAgDAXZeBlv42fBcTyPR9RFff1ATFiJdWM6yUtIoVMCKQgeQUSjLf2BfEVO
-        ZLOSHzc54zsAwpC3QNgnx+EB2ZHJSg3Y6785GrL20YHMVq6g9v5ZuFH7RVSHYO335ixQjwgXxP9DWaQ+
-        EfvKCyxUr+ArL7D4M3nwB1K6APmB9Z0weza/AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAIVJREFUSEvt
+        kUsOgCAMBdl4GW/jZ8FxPI9H1EV9/UBMWIl1YzrJS0ihUwIpCB5BRKMt/YF8RU5ks5IfNznjOwDCkLdA
+        2CfH4QHZkclKDdjrvzkasvbRgcxWrqD2/lm4UftFVIdg7ffmLFCPCBfE/0NZpD4R+8oLLFSv4CsvsPgz
+        efAHUroA+YH1nTB7Nr8AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

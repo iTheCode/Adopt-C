@@ -29,8 +29,14 @@ namespace Adopt_CSharp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
         }
 
+        BaseDeDatos bd = new BaseDeDatos();
+
         private void Perfil_Mascota_Load(object sender, EventArgs e)
         {
+            Editar_Mascota ed = new Editar_Mascota(1,1);        
+            //lblnombre.Text= bd.selectstring("select  nombre from ani where id = " + ed.id + "");
+            //lblnombre.Text = bd.selectstring("select nombre from ani where id like '" + "%" + ed.id + "%';");
+            //lblnombre.Text = bd.selectstring("select nombre from ani");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -46,6 +52,11 @@ namespace Adopt_CSharp
         }
 
         private void materialDivider1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblnombre_Click(object sender, EventArgs e)
         {
 
         }
