@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
-
+using System.IO;
 
 namespace Adopt_CSharp
 {
@@ -33,9 +33,20 @@ namespace Adopt_CSharp
         BaseDeDatos bd = new BaseDeDatos();
         private void Perfil_Mascota_Load(object sender, EventArgs e)
         {
-            Editar_Mascota ed = new Editar_Mascota(this.id_usuario, this.id_animal);       
         }
 
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,
+              imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -62,6 +73,22 @@ namespace Adopt_CSharp
         {
             this.Hide();
             Editar_Mascota ed = new Editar_Mascota(this.id_usuario, this.id_animal);
+            string nombre = bd.selectstring("select nombre from animales where id_animales = " + this.id_animal + "");
+            string raza = bd.selectstring("select raza from animales where id_animales = " + this.id_animal + "");
+            string edad = bd.selectstring("select edad from animales where id_animales = " + this.id_animal + "");
+            string tipo = bd.selectstring("select tipo from animales where id_animales = " + this.id_animal + "");
+            string ubicacion = bd.selectstring("select ubicacion from animales where id_animales = " + this.id_animal + "");
+            string historia = bd.selectstring("select informacion from animales where id_animales = " + this.id_animal + "");
+            string img = bd.selectstring("select img from img where id_animales = " + this.id_animal + "");
+            ed.Text = "        " + nombre;
+            ed.txtnombre.Text = nombre;
+            ed.txtraza.Text = raza;
+            ed.txtedad.Text = edad;
+            ed.txtcategoria.Text = tipo;
+            ed.txtubicacion.Text = ubicacion;
+            ed.txthistoria.Text = historia;
+            ed.pictureBox4.Image = Base64ToImage(img);
+            ed.pictureBox5.Image = Base64ToImage(img);
             ed.Show();
         }
     }

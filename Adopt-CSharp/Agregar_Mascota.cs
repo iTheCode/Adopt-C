@@ -31,13 +31,30 @@ namespace Adopt_CSharp
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            string nombre = am.selectstring("select nombre from login where id_usuario = '" + this.id_usuario + "'");
+            string apellido = am.selectstring("select apellido from login where id_usuario = '" + this.id_usuario + "'");
+            string image = am.selectstring("select img from login where id_usuario = '" + this.id_usuario + "'");
             Panel p = new Panel(this.id_usuario);
+            p.pictureBox36.Image = Base64ToImage(image);
+            p.materialLabel16.Text = nombre + " " + apellido;
             p.Show();
         }
 
         private void materialSingleLineTextField4_Click(object sender, EventArgs e)
         {
 
+        }
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,
+              imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
         }
         public string ImageToBase64(Image image, ImageFormat format)
         {
@@ -112,12 +129,12 @@ namespace Adopt_CSharp
             }
             else
             {
-                string agregar = "insert into animales (nombre,raza,edad,tipo,informacion,ubicacion) values ('" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "')";
+                string agregar = "insert into animales (id_cliente,nombre,raza,edad,tipo,informacion,ubicacion) values ('" + this.id_usuario + "','" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "')";
                 if (am.executecommand(agregar))
                 {
 
 
-                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where nombre = '" + txtnombre.Text + "'"));
+                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where nombre = '" + txtnombre.Text + "' and id_cliente = '" + this.id_usuario + "' and raza = '" + txtraza.Text + "' and edad = '" + txtedad.Text + "' and tipo = '" + txtcategoria.Text + "' and ubicacion = '" + txtubicacion.Text  + "'"));
                     string image = "insert into img (id_animales, img) values ('" + id_animales + "', '" + image64 + "')";
                     if (am.executecommand(image))
                     {
@@ -129,7 +146,7 @@ namespace Adopt_CSharp
                         p.lblcategoria.Text = txtcategoria.Text;
                         p.lblubicacion.Text = txtubicacion.Text;
                         p.pictureBox4.Image = Image.FromFile(imagen);
-                        p.pictureBox4.Image = Image.FromFile(imagen);
+                        p.pictureBox5.Image = Image.FromFile(imagen);
                         p.Show();
                     }
                 }

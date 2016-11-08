@@ -12,7 +12,8 @@ namespace Adopt_CSharp
     {
         private readonly MaterialSkinManager materialSkinManager;
         private int id_usuario, id_animal;
-        private string imagen, image64;
+        private string imagen;
+        BaseDeDatos bd = new BaseDeDatos();
         public Editar_Mascota(int id_usuario, int id_animal)
         {
             this.id_usuario = id_usuario;
@@ -23,10 +24,9 @@ namespace Adopt_CSharp
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
-
+            image64 = bd.selectstring("select img from img where id_animales = " + id_animal + "");
         }
-        BaseDeDatos bd = new BaseDeDatos();
-
+        private string image64;
         public Image Base64ToImage(string base64String)
         {
             // Convert Base64 String to byte[]

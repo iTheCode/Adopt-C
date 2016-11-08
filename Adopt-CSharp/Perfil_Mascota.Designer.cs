@@ -48,6 +48,8 @@
             this.lblubicacion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblhistoria = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -55,6 +57,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -101,6 +104,7 @@
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.tabPage1);
+            this.materialTabControl1.Controls.Add(this.tabPage3);
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Location = new System.Drawing.Point(12, 316);
@@ -252,6 +256,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.lblhistoria);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(469, 315);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Historia";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblhistoria
+            // 
+            this.lblhistoria.AutoSize = true;
+            this.lblhistoria.Location = new System.Drawing.Point(15, 21);
+            this.lblhistoria.Name = "lblhistoria";
+            this.lblhistoria.Size = new System.Drawing.Size(0, 13);
+            this.lblhistoria.TabIndex = 1;
+            // 
             // Perfil_Mascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +303,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,5 +330,7 @@
         public System.Windows.Forms.Label lbledad;
         public System.Windows.Forms.Label lblraza;
         public System.Windows.Forms.Label lblubicacion;
+        private System.Windows.Forms.TabPage tabPage3;
+        public System.Windows.Forms.Label lblhistoria;
     }
 }

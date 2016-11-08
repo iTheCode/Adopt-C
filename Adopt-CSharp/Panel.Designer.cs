@@ -130,6 +130,38 @@
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.materialSingleLineTextField1 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton18 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialFlatButton8 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton19 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton20 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialFlatButton9 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton21 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton22 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialFlatButton10 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton23 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.materialRaisedButton24 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialFlatButton11 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton25 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.materialTabControl1.SuspendLayout();
@@ -194,13 +226,14 @@
             this.materialRaisedButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton4.Depth = 0;
             this.materialRaisedButton4.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton4.Icon")));
-            this.materialRaisedButton4.Location = new System.Drawing.Point(39, 499);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(33, 504);
             this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton4.Name = "materialRaisedButton4";
             this.materialRaisedButton4.Primary = true;
             this.materialRaisedButton4.Size = new System.Drawing.Size(44, 36);
             this.materialRaisedButton4.TabIndex = 23;
             this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Click += new System.EventHandler(this.materialRaisedButton4_Click);
             // 
             // materialRaisedButton5
             // 
@@ -208,13 +241,14 @@
             this.materialRaisedButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton5.Depth = 0;
             this.materialRaisedButton5.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton5.Icon")));
-            this.materialRaisedButton5.Location = new System.Drawing.Point(384, 499);
+            this.materialRaisedButton5.Location = new System.Drawing.Point(378, 504);
             this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton5.Name = "materialRaisedButton5";
             this.materialRaisedButton5.Primary = true;
             this.materialRaisedButton5.Size = new System.Drawing.Size(44, 36);
             this.materialRaisedButton5.TabIndex = 24;
             this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.materialRaisedButton5_Click);
             // 
             // materialFlatButton1
             // 
@@ -222,7 +256,7 @@
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(175, 499);
+            this.materialFlatButton1.Location = new System.Drawing.Point(169, 504);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -263,6 +297,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.materialSingleLineTextField1);
+            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.materialLabel1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.materialRaisedButton1);
@@ -326,6 +364,7 @@
             this.materialRaisedButton1.TabIndex = 26;
             this.materialRaisedButton1.Text = "ver perfil";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // pictureBox6
             // 
@@ -396,6 +435,7 @@
             this.materialRaisedButton3.TabIndex = 34;
             this.materialRaisedButton3.Text = "ver perfil";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
             // label2
             // 
@@ -431,6 +471,7 @@
             this.materialRaisedButton2.TabIndex = 30;
             this.materialRaisedButton2.Text = "ver perfil";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // materialLabel3
             // 
@@ -471,6 +512,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox16);
+            this.tabPage2.Controls.Add(this.materialRaisedButton18);
+            this.tabPage2.Controls.Add(this.materialFlatButton8);
+            this.tabPage2.Controls.Add(this.materialRaisedButton19);
+            this.tabPage2.Controls.Add(this.textBox6);
+            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Controls.Add(this.materialLabel4);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.materialRaisedButton6);
@@ -489,7 +537,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(469, 503);
+            this.tabPage2.Size = new System.Drawing.Size(469, 546);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Perros";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -531,6 +579,7 @@
             this.materialRaisedButton6.TabIndex = 26;
             this.materialRaisedButton6.Text = "ver perfil";
             this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
             // pictureBox10
             // 
@@ -601,6 +650,7 @@
             this.materialRaisedButton7.TabIndex = 34;
             this.materialRaisedButton7.Text = "ver perfil";
             this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
             // 
             // label5
             // 
@@ -636,6 +686,7 @@
             this.materialRaisedButton8.TabIndex = 30;
             this.materialRaisedButton8.Text = "ver perfil";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
             // materialLabel6
             // 
@@ -676,6 +727,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox17);
+            this.tabPage3.Controls.Add(this.materialRaisedButton20);
+            this.tabPage3.Controls.Add(this.materialFlatButton9);
+            this.tabPage3.Controls.Add(this.materialRaisedButton21);
+            this.tabPage3.Controls.Add(this.textBox9);
+            this.tabPage3.Controls.Add(this.textBox8);
+            this.tabPage3.Controls.Add(this.textBox7);
             this.tabPage3.Controls.Add(this.materialLabel7);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.materialRaisedButton9);
@@ -693,7 +751,7 @@
             this.tabPage3.Controls.Add(this.pictureBox21);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(469, 503);
+            this.tabPage3.Size = new System.Drawing.Size(469, 546);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Gatos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -735,6 +793,7 @@
             this.materialRaisedButton9.TabIndex = 26;
             this.materialRaisedButton9.Text = "ver perfil";
             this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
             // 
             // pictureBox16
             // 
@@ -805,6 +864,7 @@
             this.materialRaisedButton10.TabIndex = 34;
             this.materialRaisedButton10.Text = "ver perfil";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
             // 
             // label8
             // 
@@ -840,6 +900,7 @@
             this.materialRaisedButton11.TabIndex = 30;
             this.materialRaisedButton11.Text = "ver perfil";
             this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
             // 
             // materialLabel9
             // 
@@ -880,6 +941,13 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.textBox18);
+            this.tabPage4.Controls.Add(this.materialRaisedButton22);
+            this.tabPage4.Controls.Add(this.materialFlatButton10);
+            this.tabPage4.Controls.Add(this.materialRaisedButton23);
+            this.tabPage4.Controls.Add(this.textBox12);
+            this.tabPage4.Controls.Add(this.textBox11);
+            this.tabPage4.Controls.Add(this.textBox10);
             this.tabPage4.Controls.Add(this.materialLabel10);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.materialRaisedButton12);
@@ -897,7 +965,7 @@
             this.tabPage4.Controls.Add(this.pictureBox27);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(469, 503);
+            this.tabPage4.Size = new System.Drawing.Size(469, 546);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "aves";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -939,6 +1007,7 @@
             this.materialRaisedButton12.TabIndex = 26;
             this.materialRaisedButton12.Text = "ver perfil";
             this.materialRaisedButton12.UseVisualStyleBackColor = true;
+            this.materialRaisedButton12.Click += new System.EventHandler(this.materialRaisedButton12_Click);
             // 
             // pictureBox22
             // 
@@ -1009,6 +1078,7 @@
             this.materialRaisedButton13.TabIndex = 34;
             this.materialRaisedButton13.Text = "ver perfil";
             this.materialRaisedButton13.UseVisualStyleBackColor = true;
+            this.materialRaisedButton13.Click += new System.EventHandler(this.materialRaisedButton13_Click);
             // 
             // label11
             // 
@@ -1044,6 +1114,7 @@
             this.materialRaisedButton14.TabIndex = 30;
             this.materialRaisedButton14.Text = "ver perfil";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
+            this.materialRaisedButton14.Click += new System.EventHandler(this.materialRaisedButton14_Click);
             // 
             // materialLabel12
             // 
@@ -1084,6 +1155,13 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.textBox19);
+            this.tabPage5.Controls.Add(this.materialRaisedButton24);
+            this.tabPage5.Controls.Add(this.materialFlatButton11);
+            this.tabPage5.Controls.Add(this.materialRaisedButton25);
+            this.tabPage5.Controls.Add(this.textBox15);
+            this.tabPage5.Controls.Add(this.textBox14);
+            this.tabPage5.Controls.Add(this.textBox13);
             this.tabPage5.Controls.Add(this.materialLabel13);
             this.tabPage5.Controls.Add(this.label13);
             this.tabPage5.Controls.Add(this.materialRaisedButton15);
@@ -1101,7 +1179,7 @@
             this.tabPage5.Controls.Add(this.pictureBox33);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(469, 503);
+            this.tabPage5.Size = new System.Drawing.Size(469, 546);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "otros";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1143,6 +1221,7 @@
             this.materialRaisedButton15.TabIndex = 26;
             this.materialRaisedButton15.Text = "ver perfil";
             this.materialRaisedButton15.UseVisualStyleBackColor = true;
+            this.materialRaisedButton15.Click += new System.EventHandler(this.materialRaisedButton15_Click);
             // 
             // pictureBox28
             // 
@@ -1213,6 +1292,7 @@
             this.materialRaisedButton16.TabIndex = 34;
             this.materialRaisedButton16.Text = "ver perfil";
             this.materialRaisedButton16.UseVisualStyleBackColor = true;
+            this.materialRaisedButton16.Click += new System.EventHandler(this.materialRaisedButton16_Click);
             // 
             // label14
             // 
@@ -1248,6 +1328,7 @@
             this.materialRaisedButton17.TabIndex = 30;
             this.materialRaisedButton17.Text = "ver perfil";
             this.materialRaisedButton17.UseVisualStyleBackColor = true;
+            this.materialRaisedButton17.Click += new System.EventHandler(this.materialRaisedButton17_Click);
             // 
             // materialLabel15
             // 
@@ -1503,6 +1584,355 @@
             this.materialFlatButton7.Visible = false;
             this.materialFlatButton7.Click += new System.EventHandler(this.materialFlatButton7_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(169, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 38;
+            this.textBox1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(224, 280);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 39;
+            this.textBox2.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(169, 443);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 40;
+            this.textBox3.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(169, 114);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 39;
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(224, 280);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 40;
+            this.textBox5.Visible = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(169, 434);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 41;
+            this.textBox6.Visible = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(169, 114);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 40;
+            this.textBox7.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(228, 279);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 41;
+            this.textBox8.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(169, 443);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 42;
+            this.textBox9.Visible = false;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(169, 114);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 41;
+            this.textBox10.Visible = false;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(224, 279);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.TabIndex = 42;
+            this.textBox11.Visible = false;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(169, 443);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 43;
+            this.textBox12.Visible = false;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(169, 118);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 42;
+            this.textBox13.Visible = false;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(228, 280);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 43;
+            this.textBox14.Visible = false;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(169, 443);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.TabIndex = 44;
+            this.textBox15.Visible = false;
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(172, 482);
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(100, 20);
+            this.materialSingleLineTextField1.TabIndex = 52;
+            this.materialSingleLineTextField1.Text = "0";
+            this.materialSingleLineTextField1.Visible = false;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(172, 482);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.TabIndex = 56;
+            this.textBox16.Text = "0";
+            this.textBox16.Visible = false;
+            // 
+            // materialRaisedButton18
+            // 
+            this.materialRaisedButton18.AutoSize = true;
+            this.materialRaisedButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton18.Depth = 0;
+            this.materialRaisedButton18.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton18.Icon")));
+            this.materialRaisedButton18.Location = new System.Drawing.Point(378, 504);
+            this.materialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton18.Name = "materialRaisedButton18";
+            this.materialRaisedButton18.Primary = true;
+            this.materialRaisedButton18.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton18.TabIndex = 54;
+            this.materialRaisedButton18.UseVisualStyleBackColor = true;
+            this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
+            // 
+            // materialFlatButton8
+            // 
+            this.materialFlatButton8.AutoSize = true;
+            this.materialFlatButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton8.Depth = 0;
+            this.materialFlatButton8.Icon = null;
+            this.materialFlatButton8.Location = new System.Drawing.Point(169, 504);
+            this.materialFlatButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton8.Name = "materialFlatButton8";
+            this.materialFlatButton8.Primary = false;
+            this.materialFlatButton8.Size = new System.Drawing.Size(107, 36);
+            this.materialFlatButton8.TabIndex = 55;
+            this.materialFlatButton8.Text = "Navegacion";
+            this.materialFlatButton8.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton19
+            // 
+            this.materialRaisedButton19.AutoSize = true;
+            this.materialRaisedButton19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton19.Depth = 0;
+            this.materialRaisedButton19.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton19.Icon")));
+            this.materialRaisedButton19.Location = new System.Drawing.Point(33, 504);
+            this.materialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton19.Name = "materialRaisedButton19";
+            this.materialRaisedButton19.Primary = true;
+            this.materialRaisedButton19.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton19.TabIndex = 53;
+            this.materialRaisedButton19.UseVisualStyleBackColor = true;
+            this.materialRaisedButton19.Click += new System.EventHandler(this.materialRaisedButton19_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(172, 482);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 56;
+            this.textBox17.Text = "0";
+            this.textBox17.Visible = false;
+            // 
+            // materialRaisedButton20
+            // 
+            this.materialRaisedButton20.AutoSize = true;
+            this.materialRaisedButton20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton20.Depth = 0;
+            this.materialRaisedButton20.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton20.Icon")));
+            this.materialRaisedButton20.Location = new System.Drawing.Point(378, 504);
+            this.materialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton20.Name = "materialRaisedButton20";
+            this.materialRaisedButton20.Primary = true;
+            this.materialRaisedButton20.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton20.TabIndex = 54;
+            this.materialRaisedButton20.UseVisualStyleBackColor = true;
+            this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
+            // 
+            // materialFlatButton9
+            // 
+            this.materialFlatButton9.AutoSize = true;
+            this.materialFlatButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton9.Depth = 0;
+            this.materialFlatButton9.Icon = null;
+            this.materialFlatButton9.Location = new System.Drawing.Point(169, 504);
+            this.materialFlatButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton9.Name = "materialFlatButton9";
+            this.materialFlatButton9.Primary = false;
+            this.materialFlatButton9.Size = new System.Drawing.Size(107, 36);
+            this.materialFlatButton9.TabIndex = 55;
+            this.materialFlatButton9.Text = "Navegacion";
+            this.materialFlatButton9.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton21
+            // 
+            this.materialRaisedButton21.AutoSize = true;
+            this.materialRaisedButton21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton21.Depth = 0;
+            this.materialRaisedButton21.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton21.Icon")));
+            this.materialRaisedButton21.Location = new System.Drawing.Point(33, 504);
+            this.materialRaisedButton21.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton21.Name = "materialRaisedButton21";
+            this.materialRaisedButton21.Primary = true;
+            this.materialRaisedButton21.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton21.TabIndex = 53;
+            this.materialRaisedButton21.UseVisualStyleBackColor = true;
+            this.materialRaisedButton21.Click += new System.EventHandler(this.materialRaisedButton21_Click);
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(172, 482);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.TabIndex = 56;
+            this.textBox18.Text = "0";
+            this.textBox18.Visible = false;
+            // 
+            // materialRaisedButton22
+            // 
+            this.materialRaisedButton22.AutoSize = true;
+            this.materialRaisedButton22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton22.Depth = 0;
+            this.materialRaisedButton22.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton22.Icon")));
+            this.materialRaisedButton22.Location = new System.Drawing.Point(378, 504);
+            this.materialRaisedButton22.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton22.Name = "materialRaisedButton22";
+            this.materialRaisedButton22.Primary = true;
+            this.materialRaisedButton22.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton22.TabIndex = 54;
+            this.materialRaisedButton22.UseVisualStyleBackColor = true;
+            this.materialRaisedButton22.Click += new System.EventHandler(this.materialRaisedButton22_Click);
+            // 
+            // materialFlatButton10
+            // 
+            this.materialFlatButton10.AutoSize = true;
+            this.materialFlatButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton10.Depth = 0;
+            this.materialFlatButton10.Icon = null;
+            this.materialFlatButton10.Location = new System.Drawing.Point(169, 504);
+            this.materialFlatButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton10.Name = "materialFlatButton10";
+            this.materialFlatButton10.Primary = false;
+            this.materialFlatButton10.Size = new System.Drawing.Size(107, 36);
+            this.materialFlatButton10.TabIndex = 55;
+            this.materialFlatButton10.Text = "Navegacion";
+            this.materialFlatButton10.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton23
+            // 
+            this.materialRaisedButton23.AutoSize = true;
+            this.materialRaisedButton23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton23.Depth = 0;
+            this.materialRaisedButton23.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton23.Icon")));
+            this.materialRaisedButton23.Location = new System.Drawing.Point(33, 504);
+            this.materialRaisedButton23.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton23.Name = "materialRaisedButton23";
+            this.materialRaisedButton23.Primary = true;
+            this.materialRaisedButton23.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton23.TabIndex = 53;
+            this.materialRaisedButton23.UseVisualStyleBackColor = true;
+            this.materialRaisedButton23.Click += new System.EventHandler(this.materialRaisedButton23_Click);
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(172, 482);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 56;
+            this.textBox19.Text = "0";
+            this.textBox19.Visible = false;
+            // 
+            // materialRaisedButton24
+            // 
+            this.materialRaisedButton24.AutoSize = true;
+            this.materialRaisedButton24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton24.Depth = 0;
+            this.materialRaisedButton24.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton24.Icon")));
+            this.materialRaisedButton24.Location = new System.Drawing.Point(378, 504);
+            this.materialRaisedButton24.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton24.Name = "materialRaisedButton24";
+            this.materialRaisedButton24.Primary = true;
+            this.materialRaisedButton24.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton24.TabIndex = 54;
+            this.materialRaisedButton24.UseVisualStyleBackColor = true;
+            this.materialRaisedButton24.Click += new System.EventHandler(this.materialRaisedButton24_Click);
+            // 
+            // materialFlatButton11
+            // 
+            this.materialFlatButton11.AutoSize = true;
+            this.materialFlatButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton11.Depth = 0;
+            this.materialFlatButton11.Icon = null;
+            this.materialFlatButton11.Location = new System.Drawing.Point(169, 504);
+            this.materialFlatButton11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton11.Name = "materialFlatButton11";
+            this.materialFlatButton11.Primary = false;
+            this.materialFlatButton11.Size = new System.Drawing.Size(107, 36);
+            this.materialFlatButton11.TabIndex = 55;
+            this.materialFlatButton11.Text = "Navegacion";
+            this.materialFlatButton11.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton25
+            // 
+            this.materialRaisedButton25.AutoSize = true;
+            this.materialRaisedButton25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton25.Depth = 0;
+            this.materialRaisedButton25.Icon = ((System.Drawing.Image)(resources.GetObject("materialRaisedButton25.Icon")));
+            this.materialRaisedButton25.Location = new System.Drawing.Point(33, 504);
+            this.materialRaisedButton25.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton25.Name = "materialRaisedButton25";
+            this.materialRaisedButton25.Primary = true;
+            this.materialRaisedButton25.Size = new System.Drawing.Size(44, 36);
+            this.materialRaisedButton25.TabIndex = 53;
+            this.materialRaisedButton25.UseVisualStyleBackColor = true;
+            this.materialRaisedButton25.Click += new System.EventHandler(this.materialRaisedButton25_Click);
+            // 
             // Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1690,5 +2120,37 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private System.Windows.Forms.PictureBox pictureBox37;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox materialSingleLineTextField1;
+        private System.Windows.Forms.TextBox textBox16;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton18;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton8;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton19;
+        private System.Windows.Forms.TextBox textBox17;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton20;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton9;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton21;
+        private System.Windows.Forms.TextBox textBox18;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton22;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton10;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton23;
+        private System.Windows.Forms.TextBox textBox19;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton24;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton11;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton25;
     }
 }
