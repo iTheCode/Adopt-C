@@ -122,6 +122,15 @@ namespace Adopt_CSharp
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            if(txtapellido.MaxLength>50 || txtnombre.MaxLength>50 || txtusu.MaxLength>32 || txtcontra.MaxLength>32 || txtccontra.MaxLength>32)
+            {
+                MessageBox.Show("cantidad de caracteres excedida!");
+                txtcontra.Clear();
+                txtccontra.Clear();
+                txtapellido.Clear();
+                txtnombre.Clear();
+                txtusu.Clear();
+            }
             if (rbnfem.Checked)
             {
                 genero = "femenino";
@@ -130,8 +139,10 @@ namespace Adopt_CSharp
             {
                 genero = "masculino";
             }
-            string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fecha) values ('" + txtusu.Text + "','" + txtcontra.Text + "','" + txtnombre.Text + "','" +
-            txtapellido.Text + "','" + genero + "','" + dateTimePicker1.Text + "')";
+            encriptar en = new encriptar();
+            DateTime d=Convert.ToDateTime(dateTimePicker1.Text);
+            string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fech) values ('" + txtusu.Text + "','" + en.encripta(txtcontra.Text) + "','" + txtnombre.Text + "','" +
+            txtapellido.Text + "','" + genero + "','" + d + "')";
 
             if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
             {

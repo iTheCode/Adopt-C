@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConexcionBD">
-      <HintPath>..\..\..\..\Desktop\ConexcionBD.dll</HintPath>
+      <HintPath>D:\ConexcionBD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,6 +79,7 @@
     <Compile Include="Editar_Mascota.Designer.cs">
       <DependentUpon>Editar_Mascota.cs</DependentUpon>
     </Compile>
+    <Compile Include="encriptar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

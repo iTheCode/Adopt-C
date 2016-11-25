@@ -95,10 +95,11 @@ namespace Adopt_CSharp
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            encriptar en = new encriptar();
             string usuario = bd.selectstring("select  usuario from login where usuario = '" + txtusu.Text + "'");
-            string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + txtcontra.Text + "'");
+            string contraseña = bd.selectstring("select contraseña from login where contraseña = '" + en.encripta(txtcontra.Text) + "'");
             int id_usuario = Int32.Parse(bd.selectstring("select id_usuario from login where usuario = '" + txtusu.Text + "'"));
-            if (usuario == txtusu.Text && contraseña == txtcontra.Text)
+            if (usuario == txtusu.Text && contraseña == en.encripta(txtcontra.Text))
             {
                 string nombre = bd.selectstring("select nombre from login where usuario = '" + txtusu.Text + "'");
                 string apellido = bd.selectstring("select apellido from login where usuario = '" + txtusu.Text + "'");

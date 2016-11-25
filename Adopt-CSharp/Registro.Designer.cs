@@ -79,7 +79,7 @@
             this.txtnombre.Depth = 0;
             this.txtnombre.Hint = "";
             this.txtnombre.Location = new System.Drawing.Point(169, 260);
-            this.txtnombre.MaxLength = 32767;
+            this.txtnombre.MaxLength = 50;
             this.txtnombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.PasswordChar = '\0';
@@ -96,7 +96,7 @@
             this.txtapellido.Depth = 0;
             this.txtapellido.Hint = "";
             this.txtapellido.Location = new System.Drawing.Point(169, 304);
-            this.txtapellido.MaxLength = 32767;
+            this.txtapellido.MaxLength = 50;
             this.txtapellido.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.PasswordChar = '\0';
@@ -146,7 +146,7 @@
             this.txtusu.Depth = 0;
             this.txtusu.Hint = "";
             this.txtusu.Location = new System.Drawing.Point(169, 421);
-            this.txtusu.MaxLength = 32767;
+            this.txtusu.MaxLength = 50;
             this.txtusu.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtusu.Name = "txtusu";
             this.txtusu.PasswordChar = '\0';
@@ -163,7 +163,7 @@
             this.txtcontra.Depth = 0;
             this.txtcontra.Hint = "";
             this.txtcontra.Location = new System.Drawing.Point(169, 461);
-            this.txtcontra.MaxLength = 32767;
+            this.txtcontra.MaxLength = 50;
             this.txtcontra.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.PasswordChar = '*';
@@ -180,7 +180,7 @@
             this.txtccontra.Depth = 0;
             this.txtccontra.Hint = "";
             this.txtccontra.Location = new System.Drawing.Point(169, 500);
-            this.txtccontra.MaxLength = 32767;
+            this.txtccontra.MaxLength = 50;
             this.txtccontra.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtccontra.Name = "txtccontra";
             this.txtccontra.PasswordChar = '*';
