@@ -122,7 +122,7 @@ namespace Adopt_CSharp
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            if(txtapellido.MaxLength>50 || txtnombre.MaxLength>50 || txtusu.MaxLength>32 || txtcontra.MaxLength>32 || txtccontra.MaxLength>32)
+            if(txtapellido.MaxLength>50 || txtnombre.MaxLength>50)
             {
                 MessageBox.Show("cantidad de caracteres excedida!");
                 txtcontra.Clear();
@@ -131,41 +131,50 @@ namespace Adopt_CSharp
                 txtnombre.Clear();
                 txtusu.Clear();
             }
-            if (rbnfem.Checked)
-            {
-                genero = "femenino";
-            }
-            if (rbnmas.Checked)
-            {
-                genero = "masculino";
-            }
-            encriptar en = new encriptar();
-            DateTime d=Convert.ToDateTime(dateTimePicker1.Text);
-            string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fech) values ('" + txtusu.Text + "','" + en.encripta(txtcontra.Text) + "','" + txtnombre.Text + "','" +
-            txtapellido.Text + "','" + genero + "','" + d + "')";
-
-            if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
-            {
-                if (bd.executecommand(agregar))
-                {
-                    MessageBox.Show("Registro agregado correctamente");
-                    this.Hide();
-                    Login l = new Login();
-                    l.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Error al agregar");
-                }
-            }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden o terminos no aceptados");
-                txtcontra.Clear();
-                txtccontra.Clear();
-            }
+                string usuario = bd.selectstring("select  usuario from login where usuario = '" + txtusu.Text + "'");
+                if (usuario==txtusu.Text)
+                {
+                    MessageBox.Show("Usuario existente");
+                }
+                else { 
+                    if (rbnfem.Checked)
+                    {
+                        genero = "femenino";
+                    }
+                    if (rbnmas.Checked)
+                    {
+                        genero = "masculino";
+                    }
+                    encriptar en = new encriptar();
+                    DateTime d=Convert.ToDateTime(dateTimePicker1.Text);
+                    string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fech, img) values ('" + txtusu.Text + "','" + en.encripta(txtcontra.Text) + "','" + txtnombre.Text + "','" +
+                    txtapellido.Text + "','" + genero + "','" + d + "','" + null + "')";
 
+                    if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
+                    {
+                        if (bd.executecommand(agregar))
+                        {
+                            MessageBox.Show("Registro agregado correctamente");
+                            this.Hide();
+                            Login l = new Login();
+                            l.Show();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al agregar");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Las contraseñas no coinciden o terminos no aceptados");
+                        txtcontra.Clear();
+                        txtccontra.Clear();
+                    }
+                }
+            }
         }
 
         private void rbnfem_CheckedChanged(object sender, EventArgs e)
@@ -183,6 +192,31 @@ namespace Adopt_CSharp
         private void rbnmas_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("P-E-L-A-M-E-L-A");
         }
     }
 }

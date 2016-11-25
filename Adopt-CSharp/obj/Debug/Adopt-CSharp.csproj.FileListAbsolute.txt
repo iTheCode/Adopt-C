@@ -61,3 +61,7 @@ C:\Users\usuario\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.n
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Agregar_Mascota.resources
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Editar_Mascota.resources
 C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt_CSharp.Perfil_Mascota.resources
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.exe.manifest
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\bin\Debug\Adopt-CSharp.application
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.exe.manifest
+C:\Users\Ricardo_Izecson\Source\Repos\Adopt-CSharp\Adopt-CSharp\obj\Debug\Adopt-CSharp.application
