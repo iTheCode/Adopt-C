@@ -8,7 +8,7 @@ namespace Adopt_CSharp
     public partial class Registro : MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        String genero,fecha;
+        String genero;
         public Registro()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace Adopt_CSharp
             
         }
 
-        //BaseDeDatos bd = new BaseDeDatos();
+        BaseDeDatos bd = new BaseDeDatos();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -122,38 +122,38 @@ namespace Adopt_CSharp
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            //if (rbnfem.Checked)
-            //{
-            //    genero = "femenino";
-            //}
-            //if (rbnmas.Checked)
-            //{
-            //    genero = "masculino";
-            //}
-            //string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fecha) values ('" + txtusu.Text + "','" + txtcontra.Text + "','" + txtnombre.Text + "','" +
-            //txtapellido.Text + "','" + genero + "','" + dateTimePicker1.Text + "')";
+            if (rbnfem.Checked)
+            {
+                genero = "femenino";
+            }
+            if (rbnmas.Checked)
+            {
+                genero = "masculino";
+            }
+            string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fecha) values ('" + txtusu.Text + "','" + txtcontra.Text + "','" + txtnombre.Text + "','" +
+            txtapellido.Text + "','" + genero + "','" + dateTimePicker1.Text + "')";
 
-            //if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
-            //{
-            //    if (bd.executecommand(agregar))
-            //    {
-            //        MessageBox.Show("Registro agregado correctamente");
-            //        this.Hide();
-            //        Login l = new Login();
-            //        l.Show();
+            if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
+            {
+                if (bd.executecommand(agregar))
+                {
+                    MessageBox.Show("Registro agregado correctamente");
+                    this.Hide();
+                    Login l = new Login();
+                    l.Show();
 
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Error al agregar");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Las contraseñas no coinciden o terminos no aceptados");
-            //    txtcontra.Clear();
-            //    txtccontra.Clear();
-            //}
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden o terminos no aceptados");
+                txtcontra.Clear();
+                txtccontra.Clear();
+            }
 
         }
 

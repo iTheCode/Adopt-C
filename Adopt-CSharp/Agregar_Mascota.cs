@@ -129,16 +129,11 @@ namespace Adopt_CSharp
             }
             else
             {
-                string agregar = "insert into animales (id_cliente,nombre,raza,edad,tipo,informacion,ubicacion) values ('" + this.id_usuario + "','" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "')";
+                string agregar = "insert into animales (id_cliente,nombre,raza,edad,tipo,informacion,ubicacion,img) values ('" + this.id_usuario + "','" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "', '" + image64 + "')";
                 if (am.executecommand(agregar))
                 {
-
-
-                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where nombre = '" + txtnombre.Text + "' and id_cliente = '" + this.id_usuario + "' and raza = '" + txtraza.Text + "' and edad = '" + txtedad.Text + "' and tipo = '" + txtcategoria.Text + "' and ubicacion = '" + txtubicacion.Text  + "'"));
-                    string image = "insert into img (id_animales, img) values ('" + id_animales + "', '" + image64 + "')";
-                    if (am.executecommand(image))
-                    {
-                        MessageBox.Show("mascota agregada");
+                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where id_cliente = '" + this.id_usuario + "' and nombre = '" + txtnombre.Text + "' and raza = '" + txtraza.Text + "' and edad = " + txtedad.Text + " and tipo = '" + txtcategoria.Text + "' and informacion = '" + txthistoria.Text + "' and ubicacion = '" + txtubicacion.Text + "' and img = '" + image64 + "'"));
+                        MessageBox.Show("El animal se ha puesto en adopción.");
                         Perfil_Mascota p = new Perfil_Mascota(this.id_usuario, id_animales);
                         p.lblnombre.Text = txtnombre.Text;
                         p.lblraza.Text = txtraza.Text;
@@ -148,11 +143,10 @@ namespace Adopt_CSharp
                         p.pictureBox4.Image = Image.FromFile(imagen);
                         p.pictureBox5.Image = Image.FromFile(imagen);
                         p.Show();
-                    }
                 }
                 else
                 {
-                    MessageBox.Show("mierda");
+                    MessageBox.Show("No se pudo agregar correctamente el animal.");
                 }
                 this.Hide();
             }

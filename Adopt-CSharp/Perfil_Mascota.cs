@@ -79,7 +79,7 @@ namespace Adopt_CSharp
             string tipo = bd.selectstring("select tipo from animales where id_animales = " + this.id_animal + "");
             string ubicacion = bd.selectstring("select ubicacion from animales where id_animales = " + this.id_animal + "");
             string historia = bd.selectstring("select informacion from animales where id_animales = " + this.id_animal + "");
-            string img = bd.selectstring("select img from img where id_animales = " + this.id_animal + "");
+            string img = bd.selectstring("select img from animales where id_animales = " + this.id_animal + "");
             ed.Text = "        " + nombre;
             ed.txtnombre.Text = nombre;
             ed.txtraza.Text = raza;

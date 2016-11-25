@@ -28,6 +28,11 @@ namespace Adopt_CSharp
             Setear(0, 3);
             Setear(0, 4);
 
+            string nombre = bd.selectstring("select nombre from login where id_usuario = '" + id_usuario + "'");
+            string apellido = bd.selectstring("select apellido from login where id_usuario = '" + id_usuario + "'");
+            string image = bd.selectstring("select img from login where id_usuario = '" + id_usuario + "'");
+            pictureBox36.Image = Base64ToImage(image);
+            materialLabel16.Text = nombre + " " + apellido;
 
 
         }
@@ -51,7 +56,7 @@ namespace Adopt_CSharp
             string tipo = bd.selectstring("select tipo from animales where id_animales = " + num_perfil + "");
             string ubicacion = bd.selectstring("select ubicacion from animales where id_animales = " + num_perfil + "");
             string historia = bd.selectstring("select informacion from animales where id_animales = " + num_perfil + "");
-            string img = bd.selectstring("select img from img where id_animales = " + num_perfil + "");
+            string img = bd.selectstring("select img from animales where id_animales = " + num_perfil + "");
             p.Text = "        "+nombre;
             p.lblcategoria.Text = tipo;
             p.lbledad.Text = edad;
@@ -68,41 +73,49 @@ namespace Adopt_CSharp
         {
             // Convert Base64 String to byte[]
             byte[] imageBytes = Convert.FromBase64String(base64String);
-            MemoryStream ms = new MemoryStream(imageBytes, 0,
-              imageBytes.Length);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
 
             // Convert byte[] to Image
             ms.Write(imageBytes, 0, imageBytes.Length);
             Image image = Image.FromStream(ms, true);
             return image;
         }
-        private string[][] Consultar(int inicio, int tipo)
+        private string[][] Consultar(int pagina, int tipo)
         {
 
             string[] id = new string[3];
             string[] nombre = new string[3];
             string[] historia = new string[3];
             string[] img = new string[3];
-
+            int inicio = (pagina * 3) + 1;
             if (tipo == 0) {
+                int total = Int32.Parse(bd.selectstring("select count(*) from animales")) / 3;
+                if (total == pagina && total % 3 != 0)
+                {
+                    if (total % 3 == 2) { inicio -= 1; } else if (total % 3 == 1) { inicio -=- 2; }
+                }
                 for (int i = 0; i < 3; i++)
                 {
-                    id[i] = bd.selectstring("SELECT id_animales FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_animales DESC) as row FROM animales ) as alias WHERE row =  " + ((inicio * 3) + i +1));
+                    id[i] = bd.selectstring("SELECT id_animales FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_animales DESC) as row FROM animales ) as alias WHERE row =  " + (inicio + i ));
                     nombre[i] = bd.selectstring("select nombre from animales where id_animales = '" + id[i] + "'");
                     historia[i] = bd.selectstring("select informacion from animales where id_animales = '" + id[i] + "'");
-                    img[i] = bd.selectstring("select img from img where id_animales = '"+ id[i]+"'");
+                    img[i] = bd.selectstring("select img from animales where id_animales = '"+ id[i]+"'");
 
                 }
             }
             else
             {
-
+                int total = Int32.Parse(bd.selectstring("select count(*) from animales where tipo = '" + tipo + "'")) / 3;
+                if (total == pagina && total % 3 != 0)
+                {
+                    if (total % 3 == 2) { inicio -= 1; } else if (total % 3 == 1) { inicio -= 2; }
+                }
                 for (int i = 0; i < 3; i++)
                 {
-                    id[i] = bd.selectstring("SELECT id_animales FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_animales DESC) as row FROM animales WHERE tipo = " + tipo + ") as alias WHERE row =  " + ((inicio * 3) + i + 1));
+                    id[i] = bd.selectstring("SELECT id_animales FROM ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_animales DESC) as row FROM animales WHERE tipo = " + tipo + ") as alias WHERE row =  " + (inicio + i));
                     nombre[i] = bd.selectstring("select nombre from animales where id_animales = '" + id[i] + "'");
                     historia[i] = bd.selectstring("select informacion from animales where id_animales = '" + id[i] + "'");
-                    img[i] = bd.selectstring("select img from img where id_animales = '" + id[i] + "'");
+                    img[i] = bd.selectstring("select img from animales where id_animales = '" + id[i] + "'");
 
                 }
             }

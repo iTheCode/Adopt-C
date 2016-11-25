@@ -97,9 +97,9 @@ namespace Adopt_CSharp
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string modificar = "update animales set nombre ='" + txtnombre.Text + "',raza='" + txtraza.Text + "',edad=" + txtedad.Text + ",tipo='" + txtcategoria.Text + "',informacion='" + txthistoria.Text + "',ubicacion='" + txtubicacion.Text + "' where id = " + id_animal + "";
-            string modificar_image = "update img set img ='" + image64 + "' where id_animales = '" + id_animal + "'";
-            if (bd.executecommand(modificar) && bd.executecommand(modificar_image))
+            string modificar = "update animales set nombre ='" + txtnombre.Text + "', img ='" + image64 + "', raza='" + txtraza.Text + "',edad=" + txtedad.Text + ",tipo='" + txtcategoria.Text + "',informacion='" + txthistoria.Text + "',ubicacion='" + txtubicacion.Text + "' where id = " + id_animal + "";
+
+            if (bd.executecommand(modificar))
             {
                 MessageBox.Show("modificado");
                 Perfil_Mascota p = new Perfil_Mascota(this.id_usuario,this.id_animal);
