@@ -14,6 +14,7 @@ namespace Adopt_CSharp
         private readonly MaterialSkinManager materialSkinManager;
         private int id_usuario;
         private string image64;
+        int categoria;
 
         public Agregar_Mascota(int id_usuario)
         {
@@ -95,7 +96,21 @@ namespace Adopt_CSharp
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            RadioButton btn = sender as RadioButton;
+            if (btn != null && btn.Checked)
+                {
+                switch(btn.Name)
+                   {
+                    case "materialRadioButton1": categoria = 1;
+                         break;
+                    case "materialRadioButton2": categoria = 2;
+                        break;
+                    case "materialRadioButton3": categoria = 3;
+                        break;
+                    case "materialRadioButton4": categoria = 4;
+                        break;
+                    }
+                }
             //Acá insertas al sql todo
             if (string.IsNullOrEmpty(txtnombre.Text))
             {
@@ -112,11 +127,6 @@ namespace Adopt_CSharp
                 MessageBox.Show("Debe completar la edad");
                 return;
             }
-            if (string.IsNullOrEmpty(txtcategoria.Text))
-            {
-                MessageBox.Show("Debe completar la categoria");
-                return;
-            }
             if (string.IsNullOrEmpty(txthistoria.Text))
             {
                 MessageBox.Show("Debe completar la historia");
@@ -129,16 +139,16 @@ namespace Adopt_CSharp
             }
             else
             {
-                string agregar = "insert into animales (id_cliente,nombre,raza,edad,tipo,informacion,ubicacion,img) values ('" + this.id_usuario + "','" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + txtcategoria.Text + "','" + txthistoria.Text + "','" + txtubicacion.Text + "', '" + image64 + "')";
+                string agregar = "insert into animales (id_cliente,nombre,raza,edad,tipo,informacion,ubicacion,img) values ('" + this.id_usuario + "','" + txtnombre.Text + "','" + txtraza.Text + "'," + txtedad.Text + ",'" + categoria + "','" + txthistoria.Text + "','" + txtubicacion.Text + "', '" + image64 + "')";
                 if (am.executecommand(agregar))
                 {
-                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where id_cliente = '" + this.id_usuario + "' and nombre = '" + txtnombre.Text + "' and raza = '" + txtraza.Text + "' and edad = " + txtedad.Text + " and tipo = '" + txtcategoria.Text + "' and informacion = '" + txthistoria.Text + "' and ubicacion = '" + txtubicacion.Text + "' and img = '" + image64 + "'"));
+                    int id_animales = Int32.Parse(am.selectstring("select id_animales from animales where id_cliente = '" + this.id_usuario + "' and nombre = '" + txtnombre.Text + "' and raza = '" + txtraza.Text + "' and edad = " + txtedad.Text + " and tipo = '" + categoria + "' and informacion = '" + txthistoria.Text + "' and ubicacion = '" + txtubicacion.Text + "' and img = '" + image64 + "'"));
                         MessageBox.Show("El animal se ha puesto en adopción.");
                         Perfil_Mascota p = new Perfil_Mascota(this.id_usuario, id_animales);
                         p.lblnombre.Text = txtnombre.Text;
                         p.lblraza.Text = txtraza.Text;
                         p.lbledad.Text = txtedad.Text;
-                        p.lblcategoria.Text = txtcategoria.Text;
+                        p.lblcategoria.Text = Convert.ToString(categoria);
                         p.lblubicacion.Text = txtubicacion.Text;
                         p.pictureBox4.Image = Image.FromFile(imagen);
                         p.pictureBox5.Image = Image.FromFile(imagen);
@@ -152,11 +162,7 @@ namespace Adopt_CSharp
             }
 
         }
-
-
-
-
-
+        
         private void materialTabSelector1_Click(object sender, EventArgs e)
         {
 

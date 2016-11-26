@@ -2,6 +2,9 @@
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace Adopt_CSharp
 {
@@ -21,6 +24,8 @@ namespace Adopt_CSharp
         }
 
         BaseDeDatos bd = new BaseDeDatos();
+        private string imagen;
+        private string image64;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -31,7 +36,20 @@ namespace Adopt_CSharp
         {
 
         }
+        public string ImageToBase64(Image image, ImageFormat format)
+        {
+            //Convertir Imagen a Base 64
+            using (MemoryStream ms = new MemoryStream())
+            {
+                // Convert Image to byte[]
+                image.Save(ms, format);
+                byte[] imageBytes = ms.ToArray();
 
+                // Convert byte[] to Base64 String
+                string base64String = Convert.ToBase64String(imageBytes);
+                return base64String;
+            }
+        }
         private void Registro_Load(object sender, EventArgs e)
         {
             
@@ -92,6 +110,27 @@ namespace Adopt_CSharp
 
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    imagen = openFileDialog1.FileName;
+                    pictureBox5.Image = Image.FromFile(imagen);
+
+                    ImageFormat thisFormat = pictureBox5.Image.RawFormat;
+
+                    image64 = ImageToBase64(pictureBox5.Image, thisFormat);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
+
+        }
         private void materialSingleLineTextField6_Click(object sender, EventArgs e)
         {
 
@@ -124,7 +163,7 @@ namespace Adopt_CSharp
         {
             if(txtapellido.MaxLength>50 || txtnombre.MaxLength>50)
             {
-                MessageBox.Show("cantidad de caracteres excedida!");
+                MessageBox.Show("Cantidad de Caracteres excedida!");
                 txtcontra.Clear();
                 txtccontra.Clear();
                 txtapellido.Clear();
@@ -136,7 +175,7 @@ namespace Adopt_CSharp
                 string usuario = bd.selectstring("select  usuario from login where usuario = '" + txtusu.Text + "'");
                 if (usuario==txtusu.Text)
                 {
-                    MessageBox.Show("Usuario existente");
+                    MessageBox.Show("Este Usuario ya ha sido registrado, porfavor elija otro nombre de usuario.");
                 }
                 else { 
                     if (rbnfem.Checked)
@@ -147,16 +186,20 @@ namespace Adopt_CSharp
                     {
                         genero = "masculino";
                     }
+                    if(image64 == null)
+                    {
+                        MessageBox.Show("Porfavor debe usar una imagen como muestra de su perfil, selecciona una imagen.");
+                    }
                     encriptar en = new encriptar();
                     DateTime d=Convert.ToDateTime(dateTimePicker1.Text);
                     string agregar = "insert login (usuario, contraseña, nombre, apellido, genero, fech, img) values ('" + txtusu.Text + "','" + en.encripta(txtcontra.Text) + "','" + txtnombre.Text + "','" +
-                    txtapellido.Text + "','" + genero + "','" + d + "','" + null + "')";
+                    txtapellido.Text + "','" + genero + "','" + d + "','" + image64 + "')";
 
                     if (txtcontra.Text == txtccontra.Text & CheckBox1.Checked == true)
                     {
                         if (bd.executecommand(agregar))
                         {
-                            MessageBox.Show("Registro agregado correctamente");
+                            MessageBox.Show("Usted ha sido registrado correctamente, está apto para Adoptar.");
                             this.Hide();
                             Login l = new Login();
                             l.Show();
@@ -164,12 +207,12 @@ namespace Adopt_CSharp
                         }
                         else
                         {
-                            MessageBox.Show("Error al agregar");
+                            MessageBox.Show("Error al agregar, porfavor reporte su error para solucionarlo.");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Las contraseñas no coinciden o terminos no aceptados");
+                        MessageBox.Show("Las contraseñas no coinciden o los términos no han sido aceptados.");
                         txtcontra.Clear();
                         txtccontra.Clear();
                     }
@@ -216,7 +259,8 @@ namespace Adopt_CSharp
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("P-E-L-A-M-E-L-A");
+            MessageBox.Show("Al aceptar nuestros Términos y Condiciones usted acepta ser una persona responsable y está en disposición legal de aceptar una futura adopción de una mascota, en caso de ser procesado usted afirma su responsabilidad previa coordinación con ambas partes.");
         }
+
     }
 }

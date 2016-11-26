@@ -33,7 +33,6 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtcategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.txtedad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -52,6 +51,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton3 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialRadioButton4 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -94,7 +97,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.txtcategoria);
+            this.tabPage1.Controls.Add(this.materialRadioButton4);
+            this.tabPage1.Controls.Add(this.materialRadioButton3);
+            this.tabPage1.Controls.Add(this.materialRadioButton2);
+            this.tabPage1.Controls.Add(this.materialRadioButton1);
             this.tabPage1.Controls.Add(this.materialLabel4);
             this.tabPage1.Controls.Add(this.txtedad);
             this.tabPage1.Controls.Add(this.materialLabel3);
@@ -108,23 +114,6 @@
             this.tabPage1.Size = new System.Drawing.Size(469, 261);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informacion";
-            // 
-            // txtcategoria
-            // 
-            this.txtcategoria.Depth = 0;
-            this.txtcategoria.Hint = "";
-            this.txtcategoria.Location = new System.Drawing.Point(19, 222);
-            this.txtcategoria.MaxLength = 32767;
-            this.txtcategoria.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtcategoria.Name = "txtcategoria";
-            this.txtcategoria.PasswordChar = '\0';
-            this.txtcategoria.SelectedText = "";
-            this.txtcategoria.SelectionLength = 0;
-            this.txtcategoria.SelectionStart = 0;
-            this.txtcategoria.Size = new System.Drawing.Size(401, 23);
-            this.txtcategoria.TabIndex = 7;
-            this.txtcategoria.TabStop = false;
-            this.txtcategoria.UseSystemPasswordChar = false;
             // 
             // materialLabel4
             // 
@@ -367,6 +356,75 @@
             this.pictureBox4.TabIndex = 67;
             this.pictureBox4.TabStop = false;
             // 
+            // materialRadioButton1
+            // 
+            this.materialRadioButton1.AutoSize = true;
+            this.materialRadioButton1.Depth = 0;
+            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton1.Location = new System.Drawing.Point(19, 219);
+            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton1.Name = "materialRadioButton1";
+            this.materialRadioButton1.Ripple = true;
+            this.materialRadioButton1.Size = new System.Drawing.Size(63, 30);
+            this.materialRadioButton1.TabIndex = 9;
+            this.materialRadioButton1.TabStop = true;
+            this.materialRadioButton1.Text = "Perro";
+            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton2
+            // 
+            this.materialRadioButton2.AutoSize = true;
+            this.materialRadioButton2.Depth = 0;
+            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton2.Location = new System.Drawing.Point(126, 219);
+            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton2.Name = "materialRadioButton2";
+            this.materialRadioButton2.Ripple = true;
+            this.materialRadioButton2.Size = new System.Drawing.Size(58, 30);
+            this.materialRadioButton2.TabIndex = 10;
+            this.materialRadioButton2.TabStop = true;
+            this.materialRadioButton2.Text = "Gato";
+            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton3
+            // 
+            this.materialRadioButton3.AutoSize = true;
+            this.materialRadioButton3.Depth = 0;
+            this.materialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton3.Location = new System.Drawing.Point(248, 219);
+            this.materialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton3.Name = "materialRadioButton3";
+            this.materialRadioButton3.Ripple = true;
+            this.materialRadioButton3.Size = new System.Drawing.Size(52, 30);
+            this.materialRadioButton3.TabIndex = 11;
+            this.materialRadioButton3.TabStop = true;
+            this.materialRadioButton3.Text = "Ave";
+            this.materialRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // materialRadioButton4
+            // 
+            this.materialRadioButton4.AutoSize = true;
+            this.materialRadioButton4.Checked = true;
+            this.materialRadioButton4.Depth = 0;
+            this.materialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialRadioButton4.Location = new System.Drawing.Point(357, 219);
+            this.materialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.materialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRadioButton4.Name = "materialRadioButton4";
+            this.materialRadioButton4.Ripple = true;
+            this.materialRadioButton4.Size = new System.Drawing.Size(63, 30);
+            this.materialRadioButton4.TabIndex = 12;
+            this.materialRadioButton4.TabStop = true;
+            this.materialRadioButton4.Text = "Otros";
+            this.materialRadioButton4.UseVisualStyleBackColor = true;
+            // 
             // Agregar_Mascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,12 +478,15 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtedad;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtcategoria;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.TabPage tabPage3;
         private MaterialSkin.Controls.MaterialSingleLineTextField txthistoria;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtubicacion;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton4;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton3;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
+        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
     }
 }

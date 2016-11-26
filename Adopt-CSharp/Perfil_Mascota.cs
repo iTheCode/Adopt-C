@@ -17,6 +17,7 @@ namespace Adopt_CSharp
     {
         private readonly MaterialSkinManager materialSkinManager;
         private int id_usuario, id_animal;
+        private string categoria;
         public Perfil_Mascota(int id_usuario, int id_animal)
         {
             this.id_usuario = id_usuario;
@@ -69,6 +70,11 @@ namespace Adopt_CSharp
 
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -84,7 +90,20 @@ namespace Adopt_CSharp
             ed.txtnombre.Text = nombre;
             ed.txtraza.Text = raza;
             ed.txtedad.Text = edad;
-            ed.txtcategoria.Text = tipo;
+
+            switch (tipo)
+            {
+                case "1": categoria = "Perro";
+                    break;
+                case "2": categoria = "Gato";
+                    break;
+                case "3": categoria = "Ave";
+                    break;
+                case "4": categoria = "Otro";
+                    break;
+            }
+
+            ed.txtcategoria.Text = categoria;
             ed.txtubicacion.Text = ubicacion;
             ed.txthistoria.Text = historia;
             ed.pictureBox4.Image = Base64ToImage(img);

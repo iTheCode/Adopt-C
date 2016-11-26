@@ -44,20 +44,20 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblhistoria = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblubicacion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblhistoria = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -136,7 +136,7 @@
             // lblcategoria
             // 
             this.lblcategoria.AutoSize = true;
-            this.lblcategoria.Location = new System.Drawing.Point(147, 187);
+            this.lblcategoria.Location = new System.Drawing.Point(150, 188);
             this.lblcategoria.Name = "lblcategoria";
             this.lblcategoria.Size = new System.Drawing.Size(35, 13);
             this.lblcategoria.TabIndex = 8;
@@ -145,7 +145,7 @@
             // lbledad
             // 
             this.lbledad.AutoSize = true;
-            this.lbledad.Location = new System.Drawing.Point(147, 134);
+            this.lbledad.Location = new System.Drawing.Point(150, 134);
             this.lbledad.Name = "lbledad";
             this.lbledad.Size = new System.Drawing.Size(35, 13);
             this.lbledad.TabIndex = 7;
@@ -154,7 +154,7 @@
             // lblraza
             // 
             this.lblraza.AutoSize = true;
-            this.lblraza.Location = new System.Drawing.Point(150, 74);
+            this.lblraza.Location = new System.Drawing.Point(147, 74);
             this.lblraza.Name = "lblraza";
             this.lblraza.Size = new System.Drawing.Size(35, 13);
             this.lblraza.TabIndex = 6;
@@ -172,16 +172,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 135);
+            this.label5.Location = new System.Drawing.Point(6, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Edad :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 74);
+            this.label4.Location = new System.Drawing.Point(6, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -213,6 +214,24 @@
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre : ";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.lblhistoria);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(469, 315);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Historia";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblhistoria
+            // 
+            this.lblhistoria.AutoSize = true;
+            this.lblhistoria.Location = new System.Drawing.Point(15, 21);
+            this.lblhistoria.Name = "lblhistoria";
+            this.lblhistoria.Size = new System.Drawing.Size(0, 13);
+            this.lblhistoria.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -256,24 +275,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.lblhistoria);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(469, 315);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Historia";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lblhistoria
-            // 
-            this.lblhistoria.AutoSize = true;
-            this.lblhistoria.Location = new System.Drawing.Point(15, 21);
-            this.lblhistoria.Name = "lblhistoria";
-            this.lblhistoria.Size = new System.Drawing.Size(0, 13);
-            this.lblhistoria.TabIndex = 1;
-            // 
             // Perfil_Mascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,11 +301,11 @@
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
